@@ -1,0 +1,1194 @@
+﻿base64 v0.21.7
+Γö£ΓöÇΓöÇ arrow-cast v49.0.0
+Γöé   ΓööΓöÇΓöÇ arrow v49.0.0
+Γöé       ΓööΓöÇΓöÇ duckdb v0.9.2
+Γöé           ΓööΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory)
+Γöé               Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents)
+Γöé               Γöé   ΓööΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex)
+Γöé               Γöé       ΓööΓöÇΓöÇ zed42-ui v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\ui)
+Γöé               ΓööΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γö£ΓöÇΓöÇ async-openai v0.18.3
+Γöé   Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γöé   ΓööΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+Γö£ΓöÇΓöÇ pem v2.0.1
+Γöé   ΓööΓöÇΓöÇ surrealdb-jsonwebtoken v8.3.0-surreal.1
+Γöé       ΓööΓöÇΓöÇ surrealdb-core v1.5.6
+Γöé           ΓööΓöÇΓöÇ surrealdb v1.5.6
+Γöé               Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard)
+Γöé               Γöé   Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γöé               Γöé   Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γöé               Γöé   ΓööΓöÇΓöÇ zed42-ui v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\ui)
+Γöé               ΓööΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+Γö£ΓöÇΓöÇ reqwest v0.11.27
+Γöé   Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+Γöé   Γö£ΓöÇΓöÇ reqwest-eventsource v0.4.0
+Γöé   Γöé   ΓööΓöÇΓöÇ async-openai v0.18.3 (*)
+Γöé   ΓööΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+Γö£ΓöÇΓöÇ rustls-pemfile v1.0.4
+Γöé   Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+Γöé   ΓööΓöÇΓöÇ rustls-native-certs v0.6.3
+Γöé       ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+ΓööΓöÇΓöÇ surrealdb-jsonwebtoken v8.3.0-surreal.1 (*)
+
+base64 v0.22.1
+ΓööΓöÇΓöÇ tauri-codegen v2.5.2
+    ΓööΓöÇΓöÇ tauri-macros v2.5.2 (proc-macro)
+        ΓööΓöÇΓöÇ tauri v2.9.5
+            ΓööΓöÇΓöÇ zed42-ui v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\ui)
+
+base64 v0.22.1
+ΓööΓöÇΓöÇ bcrypt v0.15.1
+    ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+
+bitflags v1.3.2
+Γö£ΓöÇΓöÇ png v0.17.16
+Γöé   Γö£ΓöÇΓöÇ ico v0.4.0
+Γöé   Γöé   ΓööΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γöé   ΓööΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+ΓööΓöÇΓöÇ selectors v0.24.0
+    ΓööΓöÇΓöÇ kuchikiki v0.8.8-speedreader
+        ΓööΓöÇΓöÇ tauri-utils v2.8.1
+            Γö£ΓöÇΓöÇ tauri-build v2.5.3
+            Γöé   [build-dependencies]
+            Γöé   ΓööΓöÇΓöÇ tauri v2.9.5 (*)
+            Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+            ΓööΓöÇΓöÇ tauri-macros v2.5.2 (proc-macro) (*)
+            [build-dependencies]
+            ΓööΓöÇΓöÇ tauri v2.9.5 (*)
+
+bitflags v2.10.0
+Γö£ΓöÇΓöÇ arrow-schema v49.0.0
+Γöé   Γö£ΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-arith v49.0.0
+Γöé   Γöé   ΓööΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-array v49.0.0
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-arith v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-cast v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-ord v49.0.0
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-row v49.0.0
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-select v49.0.0
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-cast v49.0.0 (*)
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-ord v49.0.0 (*)
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ arrow-string v49.0.0
+Γöé   Γöé   Γöé       ΓööΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ arrow-string v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-cast v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-data v49.0.0
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-arith v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-array v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-cast v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-ord v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-row v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-select v49.0.0 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ arrow-string v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-ord v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-row v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-select v49.0.0 (*)
+Γöé   ΓööΓöÇΓöÇ arrow-string v49.0.0 (*)
+Γö£ΓöÇΓöÇ git2 v0.18.3
+Γöé   ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes)
+Γöé       Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γöé       ΓööΓöÇΓöÇ zed42-mcp v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\mcp)
+Γö£ΓöÇΓöÇ keyboard-types v0.7.0
+Γöé   ΓööΓöÇΓöÇ muda v0.17.1
+Γöé       ΓööΓöÇΓöÇ tauri v2.9.5 (*)
+Γö£ΓöÇΓöÇ rusqlite v0.30.0
+Γöé   ΓööΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+ΓööΓöÇΓöÇ tao v0.34.5
+    ΓööΓöÇΓöÇ tauri-runtime-wry v2.9.3
+        ΓööΓöÇΓöÇ tauri v2.9.5 (*)
+
+darling v0.14.4
+ΓööΓöÇΓöÇ derive_builder_core v0.12.0
+    ΓööΓöÇΓöÇ derive_builder_macro v0.12.0 (proc-macro)
+        ΓööΓöÇΓöÇ derive_builder v0.12.0
+            ΓööΓöÇΓöÇ async-openai v0.18.3 (*)
+
+darling v0.20.11
+ΓööΓöÇΓöÇ revision-derive v0.7.0 (proc-macro)
+    ΓööΓöÇΓöÇ revision v0.7.1
+        Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+        ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+
+darling v0.21.3
+ΓööΓöÇΓöÇ serde_with_macros v3.16.1 (proc-macro)
+    Γö£ΓöÇΓöÇ serde_with v3.16.1
+    Γöé   Γö£ΓöÇΓöÇ cedar-policy-core v2.4.2
+    Γöé   Γöé   Γö£ΓöÇΓöÇ cedar-policy v2.4.2
+    Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+    Γöé   Γöé   ΓööΓöÇΓöÇ cedar-policy-validator v2.4.2
+    Γöé   Γöé       ΓööΓöÇΓöÇ cedar-policy v2.4.2 (*)
+    Γöé   Γö£ΓöÇΓöÇ cedar-policy-validator v2.4.2 (*)
+    Γöé   ΓööΓöÇΓöÇ tauri-utils v2.8.1
+    Γöé       Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+    Γöé       Γö£ΓöÇΓöÇ tauri-runtime v2.9.2
+    Γöé       Γöé   Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+    Γöé       Γöé   ΓööΓöÇΓöÇ tauri-runtime-wry v2.9.3 (*)
+    Γöé       ΓööΓöÇΓöÇ tauri-runtime-wry v2.9.3 (*)
+    ΓööΓöÇΓöÇ serde_with v3.16.1
+        ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+
+darling_core v0.14.4
+Γö£ΓöÇΓöÇ darling v0.14.4 (*)
+ΓööΓöÇΓöÇ darling_macro v0.14.4 (proc-macro)
+    ΓööΓöÇΓöÇ darling v0.14.4 (*)
+
+darling_core v0.20.11
+Γö£ΓöÇΓöÇ darling v0.20.11 (*)
+ΓööΓöÇΓöÇ darling_macro v0.20.11 (proc-macro)
+    ΓööΓöÇΓöÇ darling v0.20.11 (*)
+
+darling_core v0.21.3
+Γö£ΓöÇΓöÇ darling v0.21.3 (*)
+ΓööΓöÇΓöÇ darling_macro v0.21.3 (proc-macro)
+    ΓööΓöÇΓöÇ darling v0.21.3 (*)
+
+darling_macro v0.14.4 (proc-macro) (*)
+
+darling_macro v0.20.11 (proc-macro) (*)
+
+darling_macro v0.21.3 (proc-macro) (*)
+
+either v1.15.0
+Γö£ΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+Γö£ΓöÇΓöÇ itertools v0.10.5
+Γöé   Γö£ΓöÇΓöÇ cedar-policy v2.4.2 (*)
+Γöé   Γö£ΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+Γöé   ΓööΓöÇΓöÇ cedar-policy-validator v2.4.2 (*)
+ΓööΓöÇΓöÇ itertools v0.11.0
+    Γö£ΓöÇΓöÇ earcutr v0.4.3
+    Γöé   Γö£ΓöÇΓöÇ geo v0.26.0
+    Γöé   Γöé   ΓööΓöÇΓöÇ revision v0.7.1 (*)
+    Γöé   ΓööΓöÇΓöÇ geo v0.27.0
+    Γöé       Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+    Γöé       ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+    ΓööΓöÇΓöÇ object_store v0.8.0
+        ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+
+either v1.15.0
+ΓööΓöÇΓöÇ itertools v0.11.0
+    ΓööΓöÇΓöÇ lalrpop v0.20.2
+        [build-dependencies]
+        ΓööΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+
+fixedbitset v0.4.2
+ΓööΓöÇΓöÇ petgraph v0.6.5
+    ΓööΓöÇΓöÇ lalrpop v0.20.2 (*)
+
+fixedbitset v0.5.7
+ΓööΓöÇΓöÇ futures-concurrency v7.7.1
+    ΓööΓöÇΓöÇ surrealdb v1.5.6 (*)
+
+geo v0.26.0 (*)
+
+geo v0.27.0 (*)
+
+getrandom v0.1.16
+Γö£ΓöÇΓöÇ rand v0.7.3
+Γöé   ΓööΓöÇΓöÇ phf_generator v0.8.0
+Γöé       ΓööΓöÇΓöÇ phf_codegen v0.8.0
+Γöé           [build-dependencies]
+Γöé           ΓööΓöÇΓöÇ selectors v0.24.0 (*)
+ΓööΓöÇΓöÇ rand_core v0.5.1
+    Γö£ΓöÇΓöÇ rand v0.7.3 (*)
+    Γö£ΓöÇΓöÇ rand_chacha v0.2.2
+    Γöé   ΓööΓöÇΓöÇ rand v0.7.3 (*)
+    ΓööΓöÇΓöÇ rand_pcg v0.2.1
+        ΓööΓöÇΓöÇ rand v0.7.3 (*)
+
+getrandom v0.2.17
+Γö£ΓöÇΓöÇ backoff v0.4.0
+Γöé   ΓööΓöÇΓöÇ async-openai v0.18.3 (*)
+Γö£ΓöÇΓöÇ bcrypt v0.15.1 (*)
+Γö£ΓöÇΓöÇ nanorand v0.7.0
+Γöé   ΓööΓöÇΓöÇ flume v0.11.1
+Γöé       ΓööΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γö£ΓöÇΓöÇ rand_core v0.6.4
+Γöé   Γö£ΓöÇΓöÇ password-hash v0.5.0
+Γöé   Γöé   Γö£ΓöÇΓöÇ argon2 v0.5.3
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ pbkdf2 v0.12.2
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ scrypt v0.11.0
+Γöé   Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ scrypt v0.11.0 (*)
+Γöé   Γö£ΓöÇΓöÇ rand v0.8.5
+Γöé   Γöé   Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ backoff v0.4.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ nanoid v0.4.0
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ phf_generator v0.10.0
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ phf_macros v0.10.0 (proc-macro)
+Γöé   Γöé   Γöé       ΓööΓöÇΓöÇ phf v0.10.1
+Γöé   Γöé   Γöé           ΓööΓöÇΓöÇ cssparser v0.29.6
+Γöé   Γöé   Γöé               Γö£ΓöÇΓöÇ kuchikiki v0.8.8-speedreader (*)
+Γöé   Γöé   Γöé               ΓööΓöÇΓöÇ selectors v0.24.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ phf_generator v0.11.3
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ phf_codegen v0.11.3
+Γöé   Γöé   Γöé   Γöé   [build-dependencies]
+Γöé   Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ markup5ever v0.14.1
+Γöé   Γöé   Γöé   Γöé       ΓööΓöÇΓöÇ html5ever v0.29.1
+Γöé   Γöé   Γöé   Γöé           Γö£ΓöÇΓöÇ kuchikiki v0.8.8-speedreader (*)
+Γöé   Γöé   Γöé   Γöé           ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ phf_macros v0.11.3 (proc-macro)
+Γöé   Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ phf v0.11.3
+Γöé   Γöé   Γöé   Γöé       Γö£ΓöÇΓöÇ markup5ever v0.14.1 (*)
+Γöé   Γöé   Γöé   Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γöé   Γöé   Γöé       ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ string_cache_codegen v0.5.4
+Γöé   Γöé   Γöé       [build-dependencies]
+Γöé   Γöé   Γöé       ΓööΓöÇΓöÇ markup5ever v0.14.1 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ tungstenite v0.20.1
+Γöé   Γöé       ΓööΓöÇΓöÇ tokio-tungstenite v0.20.1
+Γöé   Γöé           ΓööΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé   ΓööΓöÇΓöÇ rand_chacha v0.3.1
+Γöé       ΓööΓöÇΓöÇ rand v0.8.5 (*)
+ΓööΓöÇΓöÇ ring v0.17.9
+    Γö£ΓöÇΓöÇ rustls v0.21.12
+    Γöé   Γö£ΓöÇΓöÇ hyper-rustls v0.24.2
+    Γöé   Γöé   ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+    Γöé   Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+    Γöé   Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+    Γöé   Γö£ΓöÇΓöÇ tokio-rustls v0.24.1
+    Γöé   Γöé   Γö£ΓöÇΓöÇ hyper-rustls v0.24.2 (*)
+    Γöé   Γöé   Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+    Γöé   Γöé   ΓööΓöÇΓöÇ tokio-tungstenite v0.20.1 (*)
+    Γöé   Γö£ΓöÇΓöÇ tokio-tungstenite v0.20.1 (*)
+    Γöé   ΓööΓöÇΓöÇ tungstenite v0.20.1 (*)
+    Γö£ΓöÇΓöÇ rustls-webpki v0.101.7
+    Γöé   ΓööΓöÇΓöÇ rustls v0.21.12 (*)
+    ΓööΓöÇΓöÇ sct v0.7.1
+        ΓööΓöÇΓöÇ rustls v0.21.12 (*)
+
+getrandom v0.3.4
+Γö£ΓöÇΓöÇ ahash v0.8.12
+Γöé   Γö£ΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-array v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-row v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-select v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ hashbrown v0.14.5
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-array v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-row v49.0.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ hashlink v0.8.4
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ duckdb v0.9.2 (*)
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ rusqlite v0.30.0 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ quick_cache v0.4.3
+Γöé   Γöé       ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   ΓööΓöÇΓöÇ quick_cache v0.4.3 (*)
+Γö£ΓöÇΓöÇ jobserver v0.1.34
+Γöé   ΓööΓöÇΓöÇ cc v1.0.106
+Γöé       ΓööΓöÇΓöÇ embed-resource v3.0.4
+Γöé           ΓööΓöÇΓöÇ tauri-winres v0.3.5
+Γöé               ΓööΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γöé       [build-dependencies]
+Γöé       Γö£ΓöÇΓöÇ libgit2-sys v0.16.2+1.7.2
+Γöé       Γöé   ΓööΓöÇΓöÇ git2 v0.18.3 (*)
+Γöé       Γö£ΓöÇΓöÇ libsqlite3-sys v0.27.0
+Γöé       Γöé   ΓööΓöÇΓöÇ rusqlite v0.30.0 (*)
+Γöé       Γö£ΓöÇΓöÇ libssh2-sys v0.3.1
+Γöé       Γöé   ΓööΓöÇΓöÇ libgit2-sys v0.16.2+1.7.2 (*)
+Γöé       Γö£ΓöÇΓöÇ libz-sys v1.1.23
+Γöé       Γöé   Γö£ΓöÇΓöÇ libgit2-sys v0.16.2+1.7.2 (*)
+Γöé       Γöé   ΓööΓöÇΓöÇ libssh2-sys v0.3.1 (*)
+Γöé       Γö£ΓöÇΓöÇ psm v0.1.23
+Γöé       Γöé   ΓööΓöÇΓöÇ stacker v0.1.17
+Γöé       Γöé       Γö£ΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+Γöé       Γöé       ΓööΓöÇΓöÇ cedar-policy-validator v2.4.2 (*)
+Γöé       Γö£ΓöÇΓöÇ ring v0.16.20
+Γöé       Γöé   ΓööΓöÇΓöÇ surrealdb-jsonwebtoken v8.3.0-surreal.1 (*)
+Γöé       Γö£ΓöÇΓöÇ ring v0.17.9 (*)
+Γöé       Γö£ΓöÇΓöÇ stacker v0.1.17 (*)
+Γöé       Γö£ΓöÇΓöÇ tree-sitter v0.20.10
+Γöé       Γöé   Γö£ΓöÇΓöÇ tree-sitter-go v0.20.0
+Γöé       Γöé   Γöé   ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ tree-sitter-javascript v0.20.4
+Γöé       Γöé   Γöé   ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ tree-sitter-python v0.20.4
+Γöé       Γöé   Γöé   ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ tree-sitter-rust v0.20.4
+Γöé       Γöé   Γöé   ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ tree-sitter-typescript v0.20.5
+Γöé       Γöé   Γöé   ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γöé       Γöé   ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γöé       Γö£ΓöÇΓöÇ tree-sitter-go v0.20.0 (*)
+Γöé       Γö£ΓöÇΓöÇ tree-sitter-javascript v0.20.4 (*)
+Γöé       Γö£ΓöÇΓöÇ tree-sitter-python v0.20.4 (*)
+Γöé       Γö£ΓöÇΓöÇ tree-sitter-rust v0.20.4 (*)
+Γöé       Γö£ΓöÇΓöÇ tree-sitter-typescript v0.20.5 (*)
+Γöé       ΓööΓöÇΓöÇ vswhom-sys v0.1.3
+Γöé           ΓööΓöÇΓöÇ vswhom v0.1.0
+Γöé               ΓööΓöÇΓöÇ embed-resource v3.0.4 (*)
+Γö£ΓöÇΓöÇ rand_core v0.9.5
+Γöé   Γö£ΓöÇΓöÇ rand v0.9.2
+Γöé   Γöé   ΓööΓöÇΓöÇ ulid v1.2.1
+Γöé   Γöé       ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   ΓööΓöÇΓöÇ rand_chacha v0.9.0
+Γöé       ΓööΓöÇΓöÇ rand v0.9.2 (*)
+Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γö£ΓöÇΓöÇ tempfile v3.24.0
+Γöé   [dev-dependencies]
+Γöé   Γö£ΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+Γöé   ΓööΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+Γö£ΓöÇΓöÇ uuid v1.19.0
+Γöé   Γö£ΓöÇΓöÇ cfb v0.7.3
+Γöé   Γöé   ΓööΓöÇΓöÇ infer v0.19.0
+Γöé   Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γöé       ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γö£ΓöÇΓöÇ schemars v0.8.22
+Γöé   Γöé   Γö£ΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γöé   ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+ΓööΓöÇΓöÇ uuid v1.19.0
+    Γö£ΓöÇΓöÇ revision v0.7.1 (*)
+    Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+    Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+    Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+    Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+    Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard) (*)
+    Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+    Γö£ΓöÇΓöÇ zed42-mcp v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\mcp)
+    Γö£ΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+    ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+
+hashbrown v0.12.3
+ΓööΓöÇΓöÇ indexmap v1.9.3
+    ΓööΓöÇΓöÇ schemars v0.8.22 (*)
+
+hashbrown v0.14.5 (*)
+
+hashbrown v0.15.5
+ΓööΓöÇΓöÇ spade v2.15.0
+    ΓööΓöÇΓöÇ geo v0.27.0 (*)
+
+hashbrown v0.16.1
+Γö£ΓöÇΓöÇ indexmap v2.13.0
+Γöé   Γö£ΓöÇΓöÇ h2 v0.3.27
+Γöé   Γöé   Γö£ΓöÇΓöÇ hyper v0.14.32
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ hyper-rustls v0.24.2 (*)
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ hyper-tls v0.5.0
+Γöé   Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+Γöé   Γö£ΓöÇΓöÇ serde_json v1.0.149
+Γöé   Γöé   Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ cedar-policy v2.4.2 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ cedar-policy-validator v2.4.2 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ rusqlite v0.30.0 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ serde_with v3.16.1 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ serialize-to-javascript v0.1.2
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ tauri v2.9.5 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ surrealdb-jsonwebtoken v8.3.0-surreal.1 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ tauri-runtime v2.9.2 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard) (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+Γöé   Γöé   Γö£ΓöÇΓöÇ zed42-mcp v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\mcp)
+Γöé   Γöé   Γö£ΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+Γöé   Γöé   Γö£ΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ zed42-ui v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\ui)
+Γöé   ΓööΓöÇΓöÇ surrealdb v1.5.6 (*)
+ΓööΓöÇΓöÇ indexmap v2.13.0
+    Γö£ΓöÇΓöÇ kuchikiki v0.8.8-speedreader (*)
+    Γö£ΓöÇΓöÇ petgraph v0.6.5 (*)
+    ΓööΓöÇΓöÇ toml_edit v0.20.2
+        ΓööΓöÇΓöÇ toml v0.8.2
+            ΓööΓöÇΓöÇ embed-resource v3.0.4 (*)
+
+heck v0.4.1
+Γö£ΓöÇΓöÇ snafu-derive v0.7.5 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ snafu v0.7.5
+Γöé       ΓööΓöÇΓöÇ object_store v0.8.0 (*)
+ΓööΓöÇΓöÇ strum_macros v0.25.3 (proc-macro)
+    ΓööΓöÇΓöÇ strum v0.25.0
+        ΓööΓöÇΓöÇ duckdb v0.9.2 (*)
+
+heck v0.5.0
+Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γö£ΓöÇΓöÇ tauri-build v2.5.3 (*)
+ΓööΓöÇΓöÇ tauri-macros v2.5.2 (proc-macro) (*)
+[build-dependencies]
+ΓööΓöÇΓöÇ tauri v2.9.5 (*)
+
+http v0.2.12
+Γö£ΓöÇΓöÇ h2 v0.3.27 (*)
+Γö£ΓöÇΓöÇ http-body v0.4.6
+Γöé   Γö£ΓöÇΓöÇ hyper v0.14.32 (*)
+Γöé   ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+Γö£ΓöÇΓöÇ hyper v0.14.32 (*)
+Γö£ΓöÇΓöÇ hyper-rustls v0.24.2 (*)
+Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+ΓööΓöÇΓöÇ tungstenite v0.20.1 (*)
+
+http v1.4.0
+Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γö£ΓöÇΓöÇ tauri-runtime v2.9.2 (*)
+Γö£ΓöÇΓöÇ tauri-runtime-wry v2.9.3 (*)
+Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+ΓööΓöÇΓöÇ wry v0.53.5
+    ΓööΓöÇΓöÇ tauri-runtime-wry v2.9.3 (*)
+
+indexmap v1.9.3 (*)
+
+indexmap v2.13.0 (*)
+
+indexmap v2.13.0 (*)
+
+itertools v0.10.5 (*)
+
+itertools v0.11.0 (*)
+
+itertools v0.11.0 (*)
+
+lalrpop-util v0.20.2
+Γö£ΓöÇΓöÇ cedar-policy v2.4.2 (*)
+ΓööΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+
+lalrpop-util v0.20.2
+ΓööΓöÇΓöÇ lalrpop v0.20.2 (*)
+
+phf v0.8.0
+ΓööΓöÇΓöÇ selectors v0.24.0 (*)
+
+phf v0.10.1 (*)
+
+phf v0.11.3 (*)
+
+phf_codegen v0.8.0 (*)
+
+phf_codegen v0.11.3 (*)
+
+phf_generator v0.8.0 (*)
+
+phf_generator v0.10.0 (*)
+
+phf_generator v0.11.3 (*)
+
+phf_macros v0.10.0 (proc-macro) (*)
+
+phf_macros v0.11.3 (proc-macro) (*)
+
+phf_shared v0.8.0
+Γö£ΓöÇΓöÇ phf v0.8.0 (*)
+Γö£ΓöÇΓöÇ phf_codegen v0.8.0 (*)
+ΓööΓöÇΓöÇ phf_generator v0.8.0 (*)
+
+phf_shared v0.10.0
+Γö£ΓöÇΓöÇ phf v0.10.1 (*)
+Γö£ΓöÇΓöÇ phf_generator v0.10.0 (*)
+ΓööΓöÇΓöÇ phf_macros v0.10.0 (proc-macro) (*)
+
+phf_shared v0.11.3
+Γö£ΓöÇΓöÇ phf v0.11.3 (*)
+Γö£ΓöÇΓöÇ phf_codegen v0.11.3 (*)
+Γö£ΓöÇΓöÇ phf_generator v0.11.3 (*)
+Γö£ΓöÇΓöÇ phf_macros v0.11.3 (proc-macro) (*)
+Γö£ΓöÇΓöÇ string_cache v0.8.9
+Γöé   Γö£ΓöÇΓöÇ lalrpop v0.20.2 (*)
+Γöé   ΓööΓöÇΓöÇ markup5ever v0.14.1 (*)
+ΓööΓöÇΓöÇ string_cache_codegen v0.5.4 (*)
+
+rand v0.7.3 (*)
+
+rand v0.8.5 (*)
+
+rand v0.9.2 (*)
+
+rand_chacha v0.2.2 (*)
+
+rand_chacha v0.3.1 (*)
+
+rand_chacha v0.9.0 (*)
+
+rand_core v0.5.1 (*)
+
+rand_core v0.6.4 (*)
+
+rand_core v0.9.5 (*)
+
+ring v0.16.20 (*)
+
+ring v0.17.9 (*)
+
+serde v1.0.228
+Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+Γö£ΓöÇΓöÇ bincode v1.3.3
+Γöé   Γö£ΓöÇΓöÇ revision v0.7.1 (*)
+Γöé   Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ cedar-policy v2.4.2 (*)
+Γö£ΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+Γö£ΓöÇΓöÇ cedar-policy-validator v2.4.2 (*)
+Γö£ΓöÇΓöÇ chrono v0.4.43
+Γöé   Γö£ΓöÇΓöÇ arrow-arith v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-array v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ arrow-cast v49.0.0 (*)
+Γöé   Γö£ΓöÇΓöÇ object_store v0.8.0 (*)
+Γöé   Γö£ΓöÇΓöÇ revision v0.7.1 (*)
+Γöé   Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé   Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γöé   Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard) (*)
+Γöé   Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γöé   ΓööΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+Γö£ΓöÇΓöÇ dpi v0.1.2
+Γöé   Γö£ΓöÇΓöÇ muda v0.17.1 (*)
+Γöé   Γö£ΓöÇΓöÇ tao v0.34.5 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-runtime v2.9.2 (*)
+Γöé   ΓööΓöÇΓöÇ wry v0.53.5 (*)
+Γö£ΓöÇΓöÇ geo v0.26.0 (*)
+Γö£ΓöÇΓöÇ geo v0.27.0 (*)
+Γö£ΓöÇΓöÇ geo-types v0.7.18
+Γöé   Γö£ΓöÇΓöÇ geo v0.26.0 (*)
+Γöé   Γö£ΓöÇΓöÇ geo v0.27.0 (*)
+Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ keyboard-types v0.7.0 (*)
+Γö£ΓöÇΓöÇ muda v0.17.1 (*)
+Γö£ΓöÇΓöÇ radix_trie v0.2.1
+Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+Γö£ΓöÇΓöÇ revision v0.7.1 (*)
+Γö£ΓöÇΓöÇ roaring v0.10.12
+Γöé   Γö£ΓöÇΓöÇ revision v0.7.1 (*)
+Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ rstar v0.11.0
+Γöé   Γö£ΓöÇΓöÇ geo v0.26.0 (*)
+Γöé   Γö£ΓöÇΓöÇ geo v0.27.0 (*)
+Γöé   ΓööΓöÇΓöÇ geo-types v0.7.18 (*)
+Γö£ΓöÇΓöÇ rust-stemmers v1.2.0
+Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ rust_decimal v1.40.0
+Γöé   Γö£ΓöÇΓöÇ duckdb v0.9.2 (*)
+Γöé   Γö£ΓöÇΓöÇ revision v0.7.1 (*)
+Γöé   Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ secrecy v0.8.0
+Γöé   ΓööΓöÇΓöÇ async-openai v0.18.3 (*)
+Γö£ΓöÇΓöÇ serde_urlencoded v0.7.1
+Γöé   ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+Γö£ΓöÇΓöÇ serialize-to-javascript v0.1.2 (*)
+Γö£ΓöÇΓöÇ smol_str v0.2.2
+Γöé   Γö£ΓöÇΓöÇ cedar-policy v2.4.2 (*)
+Γöé   Γö£ΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+Γöé   ΓööΓöÇΓöÇ cedar-policy-validator v2.4.2 (*)
+Γö£ΓöÇΓöÇ storekey v0.5.0
+Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ surrealdb-jsonwebtoken v8.3.0-surreal.1 (*)
+Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γö£ΓöÇΓöÇ tauri-runtime v2.9.2 (*)
+Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ ulid v1.2.1 (*)
+Γö£ΓöÇΓöÇ url v2.5.8
+Γöé   Γö£ΓöÇΓöÇ git2 v0.18.3 (*)
+Γöé   Γö£ΓöÇΓöÇ object_store v0.8.0 (*)
+Γöé   Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+Γöé   Γö£ΓöÇΓöÇ schemars v0.8.22 (*)
+Γöé   Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé   Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γö£ΓöÇΓöÇ tao v0.34.5 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-runtime v2.9.2 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-runtime-wry v2.9.3 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   Γö£ΓöÇΓöÇ tungstenite v0.20.1 (*)
+Γöé   ΓööΓöÇΓöÇ urlpattern v0.3.0
+Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé       ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard) (*)
+Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γö£ΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+Γö£ΓöÇΓöÇ zed42-mcp v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\mcp)
+Γö£ΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+Γö£ΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+ΓööΓöÇΓöÇ zed42-ui v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\ui)
+
+serde v1.0.228
+Γö£ΓöÇΓöÇ cargo-platform v0.1.9
+Γöé   ΓööΓöÇΓöÇ cargo_metadata v0.19.2
+Γöé       ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ cargo_metadata v0.19.2 (*)
+Γö£ΓöÇΓöÇ cargo_toml v0.22.3
+Γöé   ΓööΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γö£ΓöÇΓöÇ indexmap v1.9.3 (*)
+Γö£ΓöÇΓöÇ json-patch v3.0.1
+Γöé   Γö£ΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ jsonptr v0.6.3
+Γöé   ΓööΓöÇΓöÇ json-patch v3.0.1 (*)
+Γö£ΓöÇΓöÇ schemars v0.8.22 (*)
+Γö£ΓöÇΓöÇ serde_spanned v0.6.9
+Γöé   Γö£ΓöÇΓöÇ toml v0.8.2 (*)
+Γöé   ΓööΓöÇΓöÇ toml_edit v0.20.2 (*)
+Γö£ΓöÇΓöÇ string_cache v0.8.9 (*)
+Γö£ΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ toml v0.8.2 (*)
+Γö£ΓöÇΓöÇ toml_datetime v0.6.3
+Γöé   Γö£ΓöÇΓöÇ toml v0.8.2 (*)
+Γöé   ΓööΓöÇΓöÇ toml_edit v0.20.2 (*)
+Γö£ΓöÇΓöÇ toml_edit v0.20.2 (*)
+ΓööΓöÇΓöÇ urlpattern v0.3.0 (*)
+[build-dependencies]
+ΓööΓöÇΓöÇ libduckdb-sys v0.9.2
+    ΓööΓöÇΓöÇ duckdb v0.9.2 (*)
+
+serde_core v1.0.228
+Γö£ΓöÇΓöÇ camino v1.2.2
+Γöé   ΓööΓöÇΓöÇ cargo_metadata v0.19.2 (*)
+Γö£ΓöÇΓöÇ erased-serde v0.4.9
+Γöé   ΓööΓöÇΓöÇ serde-untagged v0.1.9
+Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé       ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ semver v1.0.27
+Γöé   Γö£ΓöÇΓöÇ cargo_metadata v0.19.2 (*)
+Γöé   Γö£ΓöÇΓöÇ rustc_version v0.4.1
+Γöé   Γöé   ΓööΓöÇΓöÇ embed-resource v3.0.4 (*)
+Γöé   Γöé   [build-dependencies]
+Γöé   Γöé   Γö£ΓöÇΓöÇ derive_more v0.99.20 (proc-macro)
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ selectors v0.24.0 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ heapless v0.7.17
+Γöé   Γöé       ΓööΓöÇΓöÇ rstar v0.11.0 (*)
+Γöé   Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé   Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ serde v1.0.228 (*)
+Γö£ΓöÇΓöÇ serde-untagged v0.1.9 (*)
+Γö£ΓöÇΓöÇ serde_json v1.0.149
+Γöé   Γö£ΓöÇΓöÇ cargo_metadata v0.19.2 (*)
+Γöé   Γö£ΓöÇΓöÇ json-patch v3.0.1 (*)
+Γöé   Γö£ΓöÇΓöÇ jsonptr v0.6.3 (*)
+Γöé   Γö£ΓöÇΓöÇ schemars v0.8.22 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γöé   Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γöé   ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   [build-dependencies]
+Γöé   ΓööΓöÇΓöÇ libduckdb-sys v0.9.2 (*)
+Γö£ΓöÇΓöÇ serde_spanned v1.0.4
+Γöé   ΓööΓöÇΓöÇ toml v0.9.11+spec-1.1.0
+Γöé       Γö£ΓöÇΓöÇ cargo_toml v0.22.3 (*)
+Γöé       Γö£ΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé       ΓööΓöÇΓöÇ tauri-winres v0.3.5 (*)
+Γö£ΓöÇΓöÇ serde_with v3.16.1 (*)
+Γö£ΓöÇΓöÇ toml v0.9.11+spec-1.1.0 (*)
+Γö£ΓöÇΓöÇ toml_datetime v0.7.5+spec-1.1.0
+Γöé   ΓööΓöÇΓöÇ toml v0.9.11+spec-1.1.0 (*)
+ΓööΓöÇΓöÇ uuid v1.19.0 (*)
+
+serde_core v1.0.228
+Γö£ΓöÇΓöÇ bitflags v2.10.0 (*)
+Γö£ΓöÇΓöÇ indexmap v2.13.0 (*)
+Γö£ΓöÇΓöÇ serde v1.0.228 (*)
+Γö£ΓöÇΓöÇ serde_json v1.0.149 (*)
+Γö£ΓöÇΓöÇ serde_with v3.16.1 (*)
+ΓööΓöÇΓöÇ uuid v1.19.0 (*)
+
+serde_json v1.0.149 (*)
+
+serde_json v1.0.149 (*)
+
+serde_spanned v0.6.9 (*)
+
+serde_spanned v1.0.4 (*)
+
+serde_with v3.16.1 (*)
+
+serde_with v3.16.1 (*)
+
+siphasher v0.3.11
+Γö£ΓöÇΓöÇ phf_shared v0.8.0 (*)
+ΓööΓöÇΓöÇ phf_shared v0.10.0 (*)
+
+siphasher v1.0.1
+ΓööΓöÇΓöÇ phf_shared v0.11.3 (*)
+
+socket2 v0.5.10
+ΓööΓöÇΓöÇ hyper v0.14.32 (*)
+
+socket2 v0.6.1
+ΓööΓöÇΓöÇ tokio v1.49.0
+    Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+    Γö£ΓöÇΓöÇ backoff v0.4.0 (*)
+    Γö£ΓöÇΓöÇ h2 v0.3.27 (*)
+    Γö£ΓöÇΓöÇ hyper v0.14.32 (*)
+    Γö£ΓöÇΓöÇ hyper-rustls v0.24.2 (*)
+    Γö£ΓöÇΓöÇ hyper-tls v0.5.0 (*)
+    Γö£ΓöÇΓöÇ object_store v0.8.0 (*)
+    Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+    Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+    Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+    Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+    Γö£ΓöÇΓöÇ tokio-native-tls v0.3.1
+    Γöé   Γö£ΓöÇΓöÇ hyper-tls v0.5.0 (*)
+    Γöé   ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+    Γö£ΓöÇΓöÇ tokio-rustls v0.24.1 (*)
+    Γö£ΓöÇΓöÇ tokio-stream v0.1.18
+    Γöé   ΓööΓöÇΓöÇ async-openai v0.18.3 (*)
+    Γö£ΓöÇΓöÇ tokio-tungstenite v0.20.1 (*)
+    Γö£ΓöÇΓöÇ tokio-util v0.7.18
+    Γöé   Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+    Γöé   Γö£ΓöÇΓöÇ h2 v0.3.27 (*)
+    Γöé   ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+    Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+    Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard) (*)
+    Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+    Γö£ΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+    Γö£ΓöÇΓöÇ zed42-mcp v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\mcp)
+    Γö£ΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+    Γö£ΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+    ΓööΓöÇΓöÇ zed42-ui v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\ui)
+
+spin v0.5.2
+ΓööΓöÇΓöÇ ring v0.16.20 (*)
+
+spin v0.9.8
+Γö£ΓöÇΓöÇ flume v0.11.1 (*)
+ΓööΓöÇΓöÇ heapless v0.7.17 (*)
+
+stable_deref_trait v1.2.1
+Γö£ΓöÇΓöÇ heapless v0.7.17 (*)
+ΓööΓöÇΓöÇ yoke v0.8.1
+    Γö£ΓöÇΓöÇ icu_collections v2.1.1
+    Γöé   Γö£ΓöÇΓöÇ icu_normalizer v2.1.1
+    Γöé   Γöé   ΓööΓöÇΓöÇ idna_adapter v1.2.1
+    Γöé   Γöé       ΓööΓöÇΓöÇ idna v1.1.0
+    Γöé   Γöé           ΓööΓöÇΓöÇ url v2.5.8 (*)
+    Γöé   ΓööΓöÇΓöÇ icu_properties v2.1.2
+    Γöé       ΓööΓöÇΓöÇ idna_adapter v1.2.1 (*)
+    Γö£ΓöÇΓöÇ icu_provider v2.1.1
+    Γöé   Γö£ΓöÇΓöÇ icu_normalizer v2.1.1 (*)
+    Γöé   ΓööΓöÇΓöÇ icu_properties v2.1.2 (*)
+    Γö£ΓöÇΓöÇ zerotrie v0.2.3
+    Γöé   Γö£ΓöÇΓöÇ icu_properties v2.1.2 (*)
+    Γöé   ΓööΓöÇΓöÇ icu_provider v2.1.1 (*)
+    ΓööΓöÇΓöÇ zerovec v0.11.5
+        Γö£ΓöÇΓöÇ icu_collections v2.1.1 (*)
+        Γö£ΓöÇΓöÇ icu_locale_core v2.1.1
+        Γöé   Γö£ΓöÇΓöÇ icu_properties v2.1.2 (*)
+        Γöé   ΓööΓöÇΓöÇ icu_provider v2.1.1 (*)
+        Γö£ΓöÇΓöÇ icu_normalizer v2.1.1 (*)
+        Γö£ΓöÇΓöÇ icu_properties v2.1.2 (*)
+        Γö£ΓöÇΓöÇ icu_provider v2.1.1 (*)
+        Γö£ΓöÇΓöÇ potential_utf v0.1.4
+        Γöé   ΓööΓöÇΓöÇ icu_collections v2.1.1 (*)
+        ΓööΓöÇΓöÇ tinystr v0.8.2
+            ΓööΓöÇΓöÇ icu_locale_core v2.1.1 (*)
+
+stable_deref_trait v1.2.1
+ΓööΓöÇΓöÇ servo_arc v0.2.0
+    ΓööΓöÇΓöÇ selectors v0.24.0 (*)
+
+strsim v0.10.0
+ΓööΓöÇΓöÇ darling_core v0.14.4 (*)
+
+strsim v0.11.1
+Γö£ΓöÇΓöÇ darling_core v0.20.11 (*)
+ΓööΓöÇΓöÇ darling_core v0.21.3 (*)
+
+syn v1.0.109
+Γö£ΓöÇΓöÇ darling_core v0.14.4 (*)
+Γö£ΓöÇΓöÇ darling_macro v0.14.4 (proc-macro) (*)
+Γö£ΓöÇΓöÇ derive_builder_core v0.12.0 (*)
+Γö£ΓöÇΓöÇ derive_builder_macro v0.12.0 (proc-macro) (*)
+Γö£ΓöÇΓöÇ phf_macros v0.10.0 (proc-macro) (*)
+Γö£ΓöÇΓöÇ proc-macro-error v1.0.4
+Γöé   ΓööΓöÇΓöÇ revision-derive v0.7.0 (proc-macro) (*)
+Γö£ΓöÇΓöÇ snafu-derive v0.7.5 (proc-macro) (*)
+ΓööΓöÇΓöÇ surrealdb-derive v0.12.0 (proc-macro)
+    ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+[build-dependencies]
+ΓööΓöÇΓöÇ cssparser v0.29.6 (*)
+
+syn v2.0.114
+Γö£ΓöÇΓöÇ async-recursion v1.1.1 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γö£ΓöÇΓöÇ async-trait v0.1.89 (proc-macro)
+Γöé   Γö£ΓöÇΓöÇ async-convert v1.0.0
+Γöé   Γöé   ΓööΓöÇΓöÇ async-openai v0.18.3 (*)
+Γöé   Γö£ΓöÇΓöÇ object_store v0.8.0 (*)
+Γöé   Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γöé   Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard) (*)
+Γöé   Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γöé   Γö£ΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+Γöé   Γö£ΓöÇΓöÇ zed42-mcp v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\mcp)
+Γöé   Γö£ΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+Γöé   ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γö£ΓöÇΓöÇ cssparser-macros v0.6.1 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ cssparser v0.29.6 (*)
+Γö£ΓöÇΓöÇ ctor v0.2.9 (proc-macro)
+Γöé   Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé   ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γö£ΓöÇΓöÇ darling_core v0.20.11 (*)
+Γö£ΓöÇΓöÇ darling_core v0.21.3 (*)
+Γö£ΓöÇΓöÇ darling_macro v0.20.11 (proc-macro) (*)
+Γö£ΓöÇΓöÇ darling_macro v0.21.3 (proc-macro) (*)
+Γö£ΓöÇΓöÇ derive_more v0.99.20 (proc-macro) (*)
+Γö£ΓöÇΓöÇ displaydoc v0.2.5 (proc-macro)
+Γöé   Γö£ΓöÇΓöÇ icu_collections v2.1.1 (*)
+Γöé   Γö£ΓöÇΓöÇ icu_locale_core v2.1.1 (*)
+Γöé   Γö£ΓöÇΓöÇ icu_provider v2.1.1 (*)
+Γöé   Γö£ΓöÇΓöÇ tinystr v0.8.2 (*)
+Γöé   ΓööΓöÇΓöÇ zerotrie v0.2.3 (*)
+Γö£ΓöÇΓöÇ futures-macro v0.3.31 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ futures-util v0.3.31
+Γöé       Γö£ΓöÇΓöÇ futures v0.3.31
+Γöé       Γöé   Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ object_store v0.8.0 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé       Γöé   ΓööΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé       Γö£ΓöÇΓöÇ futures-executor v0.3.31
+Γöé       Γöé   ΓööΓöÇΓöÇ futures v0.3.31 (*)
+Γöé       Γö£ΓöÇΓöÇ h2 v0.3.27 (*)
+Γöé       Γö£ΓöÇΓöÇ hyper v0.14.32 (*)
+Γöé       Γö£ΓöÇΓöÇ hyper-rustls v0.24.2 (*)
+Γöé       Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+Γöé       ΓööΓöÇΓöÇ tokio-tungstenite v0.20.1 (*)
+Γö£ΓöÇΓöÇ match_token v0.1.0 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ html5ever v0.29.1 (*)
+Γö£ΓöÇΓöÇ miette-derive v5.10.0 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ miette v5.10.0
+Γöé       ΓööΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+Γö£ΓöÇΓöÇ phf_macros v0.11.3 (proc-macro) (*)
+Γö£ΓöÇΓöÇ pin-project-internal v1.1.10 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ pin-project v1.1.10
+Γöé       ΓööΓöÇΓöÇ futures-concurrency v7.7.1 (*)
+Γö£ΓöÇΓöÇ ref-cast-impl v1.0.25 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ ref-cast v1.0.25
+Γöé       ΓööΓöÇΓöÇ cedar-policy v2.4.2 (*)
+Γö£ΓöÇΓöÇ revision-derive v0.7.0 (proc-macro) (*)
+Γö£ΓöÇΓöÇ schemars_derive v0.8.22 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ schemars v0.8.22 (*)
+Γö£ΓöÇΓöÇ serde_derive v1.0.228 (proc-macro)
+Γöé   Γö£ΓöÇΓöÇ rust-stemmers v1.2.0 (*)
+Γöé   Γö£ΓöÇΓöÇ serde v1.0.228 (*)
+Γöé   Γö£ΓöÇΓöÇ serde v1.0.228 (*)
+Γöé   ΓööΓöÇΓöÇ url v2.5.8 (*)
+Γö£ΓöÇΓöÇ serde_derive_internals v0.29.1
+Γöé   ΓööΓöÇΓöÇ schemars_derive v0.8.22 (proc-macro) (*)
+Γö£ΓöÇΓöÇ serde_repr v0.1.20 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ tauri v2.9.5 (*)
+Γö£ΓöÇΓöÇ serde_with_macros v3.16.1 (proc-macro) (*)
+Γö£ΓöÇΓöÇ serialize-to-javascript-impl v0.1.2 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ serialize-to-javascript v0.1.2 (*)
+Γö£ΓöÇΓöÇ strum_macros v0.25.3 (proc-macro) (*)
+Γö£ΓöÇΓöÇ synstructure v0.13.2
+Γöé   Γö£ΓöÇΓöÇ yoke-derive v0.8.1 (proc-macro)
+Γöé   Γöé   ΓööΓöÇΓöÇ yoke v0.8.1 (*)
+Γöé   ΓööΓöÇΓöÇ zerofrom-derive v0.1.6 (proc-macro)
+Γöé       ΓööΓöÇΓöÇ zerofrom v0.1.6
+Γöé           Γö£ΓöÇΓöÇ icu_collections v2.1.1 (*)
+Γöé           Γö£ΓöÇΓöÇ icu_provider v2.1.1 (*)
+Γöé           Γö£ΓöÇΓöÇ yoke v0.8.1 (*)
+Γöé           Γö£ΓöÇΓöÇ zerotrie v0.2.3 (*)
+Γöé           ΓööΓöÇΓöÇ zerovec v0.11.5 (*)
+Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γö£ΓöÇΓöÇ tauri-macros v2.5.2 (proc-macro) (*)
+Γö£ΓöÇΓöÇ thiserror-impl v1.0.69 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ thiserror v1.0.69
+Γöé       Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+Γöé       Γö£ΓöÇΓöÇ cedar-policy v2.4.2 (*)
+Γöé       Γö£ΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+Γöé       Γö£ΓöÇΓöÇ cedar-policy-validator v2.4.2 (*)
+Γöé       Γö£ΓöÇΓöÇ json-patch v3.0.1 (*)
+Γöé       Γö£ΓöÇΓöÇ miette v5.10.0 (*)
+Γöé       Γö£ΓöÇΓöÇ reqwest-eventsource v0.4.0 (*)
+Γöé       Γö£ΓöÇΓöÇ revision v0.7.1 (*)
+Γöé       Γö£ΓöÇΓöÇ storekey v0.5.0 (*)
+Γöé       Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé       Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé       Γö£ΓöÇΓöÇ tungstenite v0.20.1 (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard) (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+Γöé       Γö£ΓöÇΓöÇ zed42-mcp v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\mcp)
+Γöé       Γö£ΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+Γöé       ΓööΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γö£ΓöÇΓöÇ thiserror-impl v2.0.18 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ thiserror v2.0.18
+Γöé       Γö£ΓöÇΓöÇ cargo_metadata v0.19.2 (*)
+Γöé       Γö£ΓöÇΓöÇ muda v0.17.1 (*)
+Γöé       Γö£ΓöÇΓöÇ simple_asn1 v0.6.3
+Γöé       Γöé   ΓööΓöÇΓöÇ surrealdb-jsonwebtoken v8.3.0-surreal.1 (*)
+Γöé       Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γöé       Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γöé       Γö£ΓöÇΓöÇ tauri-runtime v2.9.2 (*)
+Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé       ΓööΓöÇΓöÇ wry v0.53.5 (*)
+Γöé       [build-dependencies]
+Γöé       ΓööΓöÇΓöÇ webview2-com-sys v0.38.2
+Γöé           ΓööΓöÇΓöÇ webview2-com v0.38.2
+Γöé               Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γöé               Γö£ΓöÇΓöÇ tauri-runtime v2.9.2 (*)
+Γöé               Γö£ΓöÇΓöÇ tauri-runtime-wry v2.9.3 (*)
+Γöé               ΓööΓöÇΓöÇ wry v0.53.5 (*)
+Γö£ΓöÇΓöÇ tokio-macros v2.6.0 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ tokio v1.49.0 (*)
+Γö£ΓöÇΓöÇ tracing-attributes v0.1.31 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ tracing v0.1.44
+Γöé       Γö£ΓöÇΓöÇ async-openai v0.18.3 (*)
+Γöé       Γö£ΓöÇΓöÇ h2 v0.3.27 (*)
+Γöé       Γö£ΓöÇΓöÇ hyper v0.14.32 (*)
+Γöé       Γö£ΓöÇΓöÇ object_store v0.8.0 (*)
+Γöé       Γö£ΓöÇΓöÇ softbuffer v0.4.8
+Γöé       Γöé   ΓööΓöÇΓöÇ tauri-runtime-wry v2.9.3 (*)
+Γöé       Γö£ΓöÇΓöÇ surrealdb v1.5.6 (*)
+Γöé       Γö£ΓöÇΓöÇ surrealdb-core v1.5.6 (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-agents v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\agents) (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-blackboard v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\blackboard) (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-cortex v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\cortex) (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-llm v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\llm)
+Γöé       Γö£ΓöÇΓöÇ zed42-mcp v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\mcp)
+Γöé       Γö£ΓöÇΓöÇ zed42-memory v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\memory) (*)
+Γöé       Γö£ΓöÇΓöÇ zed42-toolboxes v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\toolboxes) (*)
+Γöé       ΓööΓöÇΓöÇ zed42-ui v0.1.0 (C:\Users\sgtsl\OneDrive\Desktop\Projects\ZED42\crates\ui)
+Γö£ΓöÇΓöÇ webview2-com-macros v0.8.1 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ webview2-com v0.38.2 (*)
+Γö£ΓöÇΓöÇ windows-implement v0.60.2 (proc-macro)
+Γöé   Γö£ΓöÇΓöÇ webview2-com v0.38.2 (*)
+Γöé   ΓööΓöÇΓöÇ windows-core v0.61.2
+Γöé       Γö£ΓöÇΓöÇ tao v0.34.5 (*)
+Γöé       Γö£ΓöÇΓöÇ webview2-com v0.38.2 (*)
+Γöé       Γö£ΓöÇΓöÇ webview2-com-sys v0.38.2 (*)
+Γöé       Γö£ΓöÇΓöÇ windows v0.61.3
+Γöé       Γöé   Γö£ΓöÇΓöÇ tao v0.34.5 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ tauri-runtime v2.9.2 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ tauri-runtime-wry v2.9.3 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ webview2-com v0.38.2 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ webview2-com-sys v0.38.2 (*)
+Γöé       Γöé   ΓööΓöÇΓöÇ wry v0.53.5 (*)
+Γöé       Γö£ΓöÇΓöÇ windows-collections v0.2.0
+Γöé       Γöé   ΓööΓöÇΓöÇ windows v0.61.3 (*)
+Γöé       Γö£ΓöÇΓöÇ windows-future v0.2.1
+Γöé       Γöé   ΓööΓöÇΓöÇ windows v0.61.3 (*)
+Γöé       Γö£ΓöÇΓöÇ windows-numerics v0.2.0
+Γöé       Γöé   ΓööΓöÇΓöÇ windows v0.61.3 (*)
+Γöé       ΓööΓöÇΓöÇ wry v0.53.5 (*)
+Γö£ΓöÇΓöÇ windows-interface v0.59.3 (proc-macro)
+Γöé   Γö£ΓöÇΓöÇ webview2-com v0.38.2 (*)
+Γöé   ΓööΓöÇΓöÇ windows-core v0.61.2 (*)
+Γö£ΓöÇΓöÇ yoke-derive v0.8.1 (proc-macro) (*)
+Γö£ΓöÇΓöÇ zerocopy-derive v0.8.33 (proc-macro)
+Γöé   ΓööΓöÇΓöÇ zerocopy v0.8.33
+Γöé       Γö£ΓöÇΓöÇ ahash v0.8.12 (*)
+Γöé       Γö£ΓöÇΓöÇ half v2.7.1
+Γöé       Γöé   Γö£ΓöÇΓöÇ arrow-arith v49.0.0 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ arrow-array v49.0.0 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ arrow-buffer v49.0.0
+Γöé       Γöé   Γöé   Γö£ΓöÇΓöÇ arrow v49.0.0 (*)
+Γöé       Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-arith v49.0.0 (*)
+Γöé       Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-array v49.0.0 (*)
+Γöé       Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-cast v49.0.0 (*)
+Γöé       Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-data v49.0.0 (*)
+Γöé       Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-ord v49.0.0 (*)
+Γöé       Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-row v49.0.0 (*)
+Γöé       Γöé   Γöé   Γö£ΓöÇΓöÇ arrow-select v49.0.0 (*)
+Γöé       Γöé   Γöé   ΓööΓöÇΓöÇ arrow-string v49.0.0 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ arrow-cast v49.0.0 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ arrow-data v49.0.0 (*)
+Γöé       Γöé   Γö£ΓöÇΓöÇ arrow-ord v49.0.0 (*)
+Γöé       Γöé   ΓööΓöÇΓöÇ arrow-row v49.0.0 (*)
+Γöé       ΓööΓöÇΓöÇ ppv-lite86 v0.2.21
+Γöé           Γö£ΓöÇΓöÇ rand_chacha v0.2.2 (*)
+Γöé           Γö£ΓöÇΓöÇ rand_chacha v0.3.1 (*)
+Γöé           ΓööΓöÇΓöÇ rand_chacha v0.9.0 (*)
+Γö£ΓöÇΓöÇ zerofrom-derive v0.1.6 (proc-macro) (*)
+ΓööΓöÇΓöÇ zerovec-derive v0.11.2 (proc-macro)
+    ΓööΓöÇΓöÇ zerovec v0.11.5 (*)
+
+tauri-utils v2.8.1 (*)
+
+tauri-utils v2.8.1 (*)
+
+thiserror v1.0.69 (*)
+
+thiserror v2.0.18 (*)
+
+thiserror-impl v1.0.69 (proc-macro) (*)
+
+thiserror-impl v2.0.18 (proc-macro) (*)
+
+toml v0.8.2 (*)
+
+toml v0.9.11+spec-1.1.0 (*)
+
+toml_datetime v0.6.3 (*)
+
+toml_datetime v0.7.5+spec-1.1.0 (*)
+
+unicode-width v0.1.14
+ΓööΓöÇΓöÇ miette v5.10.0 (*)
+
+unicode-width v0.2.2
+ΓööΓöÇΓöÇ comfy-table v7.2.2
+    ΓööΓöÇΓöÇ arrow-cast v49.0.0 (*)
+
+unicode-xid v0.2.6
+ΓööΓöÇΓöÇ lalrpop v0.20.2 (*)
+
+unicode-xid v0.2.6
+ΓööΓöÇΓöÇ rustc_lexer v0.1.0
+    ΓööΓöÇΓöÇ cedar-policy-core v2.4.2 (*)
+
+untrusted v0.7.1
+ΓööΓöÇΓöÇ ring v0.16.20 (*)
+
+untrusted v0.9.0
+Γö£ΓöÇΓöÇ ring v0.17.9 (*)
+Γö£ΓöÇΓöÇ rustls-webpki v0.101.7 (*)
+ΓööΓöÇΓöÇ sct v0.7.1 (*)
+
+uuid v1.19.0 (*)
+
+uuid v1.19.0 (*)
+
+winapi v0.3.9
+Γö£ΓöÇΓöÇ dirs-sys-next v0.1.2
+Γöé   ΓööΓöÇΓöÇ dirs-next v2.0.0
+Γöé       ΓööΓöÇΓöÇ term v0.7.0
+Γöé           Γö£ΓöÇΓöÇ ascii-canvas v3.0.0
+Γöé           Γöé   ΓööΓöÇΓöÇ lalrpop v0.20.2 (*)
+Γöé           ΓööΓöÇΓöÇ lalrpop v0.20.2 (*)
+ΓööΓöÇΓöÇ term v0.7.0 (*)
+
+winapi v0.3.9
+ΓööΓöÇΓöÇ ring v0.16.20 (*)
+
+windows-link v0.1.3
+Γö£ΓöÇΓöÇ windows v0.61.3 (*)
+Γö£ΓöÇΓöÇ windows-core v0.61.2 (*)
+Γö£ΓöÇΓöÇ windows-future v0.2.1 (*)
+Γö£ΓöÇΓöÇ windows-numerics v0.2.0 (*)
+Γö£ΓöÇΓöÇ windows-result v0.3.4
+Γöé   ΓööΓöÇΓöÇ windows-core v0.61.2 (*)
+Γö£ΓöÇΓöÇ windows-strings v0.4.2
+Γöé   ΓööΓöÇΓöÇ windows-core v0.61.2 (*)
+ΓööΓöÇΓöÇ windows-threading v0.1.0
+    ΓööΓöÇΓöÇ windows-future v0.2.1 (*)
+
+windows-link v0.2.1
+Γö£ΓöÇΓöÇ chrono v0.4.43 (*)
+Γö£ΓöÇΓöÇ parking_lot_core v0.9.12
+Γöé   ΓööΓöÇΓöÇ parking_lot v0.12.5
+Γöé       Γö£ΓöÇΓöÇ object_store v0.8.0 (*)
+Γöé       Γö£ΓöÇΓöÇ quick_cache v0.4.3 (*)
+Γöé       Γö£ΓöÇΓöÇ string_cache v0.8.9 (*)
+Γöé       Γö£ΓöÇΓöÇ tao v0.34.5 (*)
+Γöé       ΓööΓöÇΓöÇ tokio v1.49.0 (*)
+Γö£ΓöÇΓöÇ windows-sys v0.61.2
+Γöé   Γö£ΓöÇΓöÇ dirs-sys v0.5.0
+Γöé   Γöé   ΓööΓöÇΓöÇ dirs v6.0.0
+Γöé   Γöé       Γö£ΓöÇΓöÇ tauri v2.9.5 (*)
+Γöé   Γöé       ΓööΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γöé   Γö£ΓöÇΓöÇ mio v1.1.1
+Γöé   Γöé   ΓööΓöÇΓöÇ tokio v1.49.0 (*)
+Γöé   Γö£ΓöÇΓöÇ schannel v0.1.28
+Γöé   Γöé   Γö£ΓöÇΓöÇ native-tls v0.2.14
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ hyper-tls v0.5.0 (*)
+Γöé   Γöé   Γöé   Γö£ΓöÇΓöÇ reqwest v0.11.27 (*)
+Γöé   Γöé   Γöé   ΓööΓöÇΓöÇ tokio-native-tls v0.3.1 (*)
+Γöé   Γöé   ΓööΓöÇΓöÇ rustls-native-certs v0.6.3 (*)
+Γöé   Γö£ΓöÇΓöÇ softbuffer v0.4.8 (*)
+Γöé   Γö£ΓöÇΓöÇ tempfile v3.24.0 (*)
+Γöé   ΓööΓöÇΓöÇ tokio v1.49.0 (*)
+Γö£ΓöÇΓöÇ windows-sys v0.61.2
+Γöé   ΓööΓöÇΓöÇ winapi-util v0.1.11
+Γöé       Γö£ΓöÇΓöÇ same-file v1.0.6
+Γöé       Γöé   ΓööΓöÇΓöÇ walkdir v2.5.0
+Γöé       Γöé       Γö£ΓöÇΓöÇ lalrpop v0.20.2 (*)
+Γöé       Γöé       Γö£ΓöÇΓöÇ object_store v0.8.0 (*)
+Γöé       Γöé       Γö£ΓöÇΓöÇ tauri-build v2.5.3 (*)
+Γöé       Γöé       Γö£ΓöÇΓöÇ tauri-codegen v2.5.2 (*)
+Γöé       Γöé       Γö£ΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé       Γöé       ΓööΓöÇΓöÇ tauri-utils v2.8.1 (*)
+Γöé       ΓööΓöÇΓöÇ walkdir v2.5.0 (*)
+ΓööΓöÇΓöÇ windows-version v0.1.7
+    Γö£ΓöÇΓöÇ tao v0.34.5 (*)
+    Γö£ΓöÇΓöÇ window-vibrancy v0.6.0
+    Γöé   ΓööΓöÇΓöÇ tauri v2.9.5 (*)
+    ΓööΓöÇΓöÇ wry v0.53.5 (*)
+
+windows-sys v0.48.0
+ΓööΓöÇΓöÇ winreg v0.50.0
+    ΓööΓöÇΓöÇ reqwest v0.11.27 (*)
+
+windows-sys v0.52.0
+ΓööΓöÇΓöÇ socket2 v0.5.10 (*)
+
+windows-sys v0.59.0
+Γö£ΓöÇΓöÇ stacker v0.1.17 (*)
+ΓööΓöÇΓöÇ window-vibrancy v0.6.0 (*)
+
+windows-sys v0.59.0
+ΓööΓöÇΓöÇ winreg v0.55.0
+    ΓööΓöÇΓöÇ embed-resource v3.0.4 (*)
+
+windows-sys v0.60.2
+Γö£ΓöÇΓöÇ muda v0.17.1 (*)
+ΓööΓöÇΓöÇ socket2 v0.6.1 (*)
+
+windows-sys v0.61.2 (*)
+
+windows-sys v0.61.2 (*)
+
+windows-targets v0.48.5
+ΓööΓöÇΓöÇ windows-sys v0.48.0 (*)
+
+windows-targets v0.52.6
+Γö£ΓöÇΓöÇ windows-sys v0.52.0 (*)
+Γö£ΓöÇΓöÇ windows-sys v0.59.0 (*)
+ΓööΓöÇΓöÇ windows-sys v0.59.0 (*)
+
+windows-targets v0.53.5
+ΓööΓöÇΓöÇ windows-sys v0.60.2 (*)
+
+windows_x86_64_msvc v0.48.5
+ΓööΓöÇΓöÇ windows-targets v0.48.5 (*)
+
+windows_x86_64_msvc v0.52.6
+ΓööΓöÇΓöÇ windows-targets v0.52.6 (*)
+
+windows_x86_64_msvc v0.53.1
+ΓööΓöÇΓöÇ windows-targets v0.53.5 (*)
+
+winnow v0.5.40
+ΓööΓöÇΓöÇ toml_edit v0.20.2 (*)
+
+winnow v0.7.14
+Γö£ΓöÇΓöÇ toml v0.9.11+spec-1.1.0 (*)
+ΓööΓöÇΓöÇ toml_parser v1.0.6+spec-1.1.0
+    ΓööΓöÇΓöÇ toml v0.9.11+spec-1.1.0 (*)
+
+winreg v0.50.0 (*)
+
+winreg v0.55.0 (*)

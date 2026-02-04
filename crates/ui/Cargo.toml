@@ -1,0 +1,19 @@
+[package]
+name = "zed42-ui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tauri.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+
+# Internal crates
+zed42-core = { path = "../core" }
+zed42-cortex = { path = "../cortex" }
+zed42-blackboard = { path = "../blackboard" }

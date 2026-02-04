@@ -1,0 +1,22 @@
+[package]
+name = "zed42-ledger"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+surrealdb.workspace = true
+rust_decimal = { version = "1.33", features = ["serde"] }
+thiserror.workspace = true
+anyhow.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+zed42-core = { version = "0.1.0", path = "../core" }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }
+rust_decimal_macros = "1.33"

@@ -1,0 +1,19 @@
+[package]
+name = "zed42-mcp"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+uuid.workspace = true
+
+# Internal crates
+zed42-toolboxes = { path = "../toolboxes" }

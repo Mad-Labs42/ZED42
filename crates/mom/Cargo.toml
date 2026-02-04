@@ -1,0 +1,28 @@
+[package]
+name = "zed42-mom"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+zed42-core = { path = "../core" }
+zed42-llm = { path = "../llm" }
+zed42-ledger = { path = "../ledger" }
+
+tokio.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+dashmap.workspace = true
+surrealdb.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+tracing.workspace = true
+rust_decimal = "1.33"
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }
+rust_decimal_macros = "1.33"

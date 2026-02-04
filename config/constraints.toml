@@ -1,0 +1,41 @@
+# ZED42 Architectural Constraints
+# These constraints are enforced by the Green Team
+
+[architectural_patterns]
+# Enforce specific architectural patterns
+max_class_methods = 15
+max_function_lines = 100
+max_file_lines = 500
+cyclomatic_complexity_threshold = 10
+
+[code_quality]
+# Code quality standards
+require_error_handling = true
+no_unwrap_in_production = true
+require_tests_for_new_code = true
+min_test_coverage_percent = 80
+
+[security]
+# Security constraints
+no_hardcoded_secrets = true
+require_input_validation = true
+require_secure_defaults = true
+check_owasp_top_10 = true
+
+[naming_conventions]
+# Naming standards
+snake_case_for_functions = true
+pascal_case_for_types = true
+screaming_snake_case_for_constants = true
+
+[dependencies]
+# Dependency management
+check_vulnerability_db = true
+check_licenses = true
+max_dependency_age_days = 730
+
+[performance]
+# Performance constraints
+max_memory_allocation_mb = 100
+max_execution_time_ms = 5000
+no_blocking_in_async = true

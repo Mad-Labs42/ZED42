@@ -1,0 +1,1198 @@
+**ZED42: Final Architecture Design Document**
+
+**Version 1.0 - Neuro-Symbolic Orchestrator with Adversarial Multi-Agent Architecture**
+
+**1\. Executive Architecture Summary**
+
+Zed42 (Zed) is a **desktop-native SDLC orchestrator** that functions as a synthetic development teammate, guiding users from intent through production-ready implementation while maintaining FAANG+ code quality standards. The system employs a **hierarchical adversarial multi-agent architecture** coordinated through a **living blackboard substrate**, combining deterministic constraint systems with frontier-level local language models.
+
+**Core Architectural Principles**
+
+- **Local-First Sovereignty** - Zero external dependencies, complete user control
+- **Memory as Foundation** - The knowledge graph is primary; agents are ephemeral
+- **Transparent Reasoning** - Every decision is traceable through the blackboard graph
+- **Adversarial Quality Assurance** - Red/Blue team opposition ensures robust outputs
+- **Progressive Disclosure** - Complexity hidden until needed, power available when required
+
+**2\. System Architecture Overview**
+
+**High-Level System Diagram**
+
+┌─────────────────────────────────────────────────────────────────┐
+
+│ THE CORTEX │
+
+│ (Executive Orchestrator & Team Spawner) │
+
+│ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ │
+
+│ │ Intent Parser│ │Task Planner │ │Team Manager │ │
+
+│ └──────┬───────┘ └──────┬───────┘ └──────┬───────┘ │
+
+└─────────┼──────────────────┼──────────────────┼─────────────────┘
+
+│ │ │
+
+└──────────────────┼──────────────────┘
+
+│
+
+┌──────────────────▼──────────────────┐
+
+│ BLACKBOARD (SurrealDB FQL) │
+
+│ • State Management │
+
+│ • Message Bus │
+
+│ • Decision Graph │
+
+│ • Audit Trail │
+
+└──────────┬─────────────┬────────────┘
+
+│ │
+
+┌───────────┼─────────────┼───────────┐
+
+│ │ │ │
+
+┌────▼────┐ ┌───▼────┐ ┌────▼────┐ ┌───▼──────┐
+
+│RED TEAM │ │BLUE TEAM│ │GREEN TEAM│ │ MEMORY │
+
+│(Offense)│ │(Defense)│ │ (Judge) │ │ FABRIC │
+
+└────┬────┘ └───┬────┘ └────┬────┘ └───┬──────┘
+
+│ │ │ │
+
+└──────────┼──────────────┼──────────┘
+
+│ │
+
+┌──────────▼──────────────▼─────────┐
+
+│ MCP BRIDGE (Tool Layer) │
+
+│ • IDE Connectors │
+
+│ • File System Operations │
+
+│ • Git Integration │
+
+│ • Build Systems │
+
+│ • Execution Sandboxes │
+
+└────────────────────────────────────┘
+
+**3\. The Blackboard: Living State Substrate**
+
+**3.1 Architectural Role**
+
+The Blackboard is not merely a message queue but the **shared cognitive substrate** of the entire system. It serves four critical functions:
+
+- **MOM Reactive Substrate** - Sub-millisecond real-time coordination via SurrealDB 2.x `LIVE SELECT`
+- **State Store** - Current system goals, constraints, and active tasks (SCHEMAFULL)
+- **Decision Graph** - Immutable record of why decisions were made, linked to Memory Fabric
+- **Vitality Substrate (AURA)** - 4-tiered health monitoring (Pulse, Sentinel, Reactive, Reaper)
+
+**3.2 Data Model (SurrealDB Schema)**
+
+**Core Entities:**
+
+- **blackboard** (SCHEMAFULL) - High-integrity message bus with `Record<agent>` senders and UUID correlation IDs
+- **agent_heartbeat** (SCHEMAFULL) - Managed by AURA Pulse with automated TTL cleanup
+- **state** - Current session goals, constraints, confidence thresholds
+- **tasks** - Decomposed work units with acceptance criteria and confidence scores
+- **artifacts** - Code, documentation, tests, diagrams produced by agents
+- **decisions** - Architectural choices with rationale and impact analysis
+- **constraints** - Active validation rules and architectural patterns
+
+**Relationships (Graph Edges):**
+
+- spawned_by - Agent lineage tracking
+- responds_to - Message threading with latency metrics
+- produces - Agent → Artifact → Task context linkage
+- implements - Code → Architectural Decision mapping
+- depends_on - Cross-module dependency graph
+- invalidates - When new code supersedes old decisions
+
+**3.3 Message Types & Protocols**
+
+**Message Categories:**
+
+- **Command Messages** - Direct task assignments (execute_task, spawn_agent, dissolve_agent)
+- **Query Messages** - Information requests (request_context, query_knowledge_graph, get_constraints)
+- **Proposal Messages** - Suggestions requiring approval (propose_solution, suggest_refactor, identify_risk)
+- **Verdict Messages** - Judgments and approvals (approve_change, reject_proposal, request_revision)
+- **Notification Messages** - Status updates (task_complete, error_occurred, milestone_reached)
+
+**Message Structure:**
+
+{
+
+timestamp: DateTime,
+
+from_agent: AgentId,
+
+to_team: "red" | "blue" | "green" | "all",
+
+message_type: MessageType,
+
+thread_id: ThreadId,
+
+priority: 1-10,
+
+requires_response: bool,
+
+payload: {
+
+// Type-specific structured data
+
+}
+
+}
+
+**3.4 FQL Query Patterns**
+
+**MOM Reactive Substrate** - Agents subscribe to relevant message streams via the `BlackboardWatcher` (ADR 0004)
+
+LIVE SELECT * FROM blackboard
+WHERE target_team IN ["red", "all"]
+ORDER BY priority DESC, created_at ASC
+
+**Graph Traversal** - Trace decision chains through relationships
+
+SELECT <-spawned_by<-agents<-produces<-artifacts
+
+FROM decisions:decision_id
+
+**Temporal Queries** - Understand system state at any historical point
+
+SELECT \* FROM blackboard_state
+
+WHERE session_id = \$session
+
+AND timestamp <= \$target_time
+
+**Context Assembly** - Gather relevant information for agent reasoning
+
+LET \$active_tasks = SELECT \* FROM tasks WHERE status IN \["in_progress", "proposed"\];
+
+LET \$recent_decisions = SELECT \* FROM decisions WHERE timestamp > time::now() - 1h;
+
+LET \$relevant_constraints = SELECT \* FROM constraints WHERE applies_to CONTAINS \$current_module;
+
+RETURN { tasks: \$active_tasks, decisions: \$recent_decisions, constraints: \$relevant_constraints }
+
+**4\. Red/Blue/Green Team Architecture (ADR 0006)**
+
+**4.1 Team Mandates & Incentive Structure**
+
+**Red Team (Offensive Security & Optimization)**
+
+- **Primary Objective:** Identify weaknesses, edge cases, security vulnerabilities, and performance bottlenecks
+- **Incentive Alignment:** Rewarded for finding flaws BEFORE code reaches production
+- **Constraints:** Cannot modify production code directly; must provide reproduction cases
+- **Success Metrics:** Issues found, edge cases covered, performance improvements identified
+
+**Blue Team (Defensive Implementation)**
+
+- **Primary Objective:** Implement features safely with comprehensive testing and backward compatibility
+- **Incentive Alignment:** Rewarded for passing all Red Team challenges and Green Team review
+- **Constraints:** Must write tests, cannot break public APIs, requires Green approval for merges
+- **Success Metrics:** Test coverage percentage, backward compatibility maintained, zero production incidents
+
+**Green Team (Architectural Governance)**
+
+- **Primary Objective:** Enforce long-term architectural integrity, arbitrate disputes, maintain technical standards
+- **Incentive Alignment:** Rewarded for preventing technical debt and maintaining codebase health
+- **Constraints:** Cannot implement code directly, must provide detailed rationale for all decisions
+- **Success Metrics:** Architectural consistency, technical debt prevented, dispute resolution speed
+
+**4.2 Specialized Agent Types**
+
+**Red Team Agents (Spawned on Demand):**
+
+- PenetrationTester - Security vulnerability detection (OWASP Top 10, injection attacks, auth bypass)
+- ChaosEngineer - Failure mode testing (network partitions, resource exhaustion, race conditions)
+- PerformanceAnalyst - Bottleneck identification (profiling, algorithmic complexity, memory leaks)
+- EdgeCaseMiner - Boundary condition discovery (null handling, overflow, concurrent access)
+- TechnicalDebtor - Strategic shortcut identification (acceptable debt with explicit payback plans)
+
+**Blue Team Agents (Spawned on Demand):**
+
+- FeatureImplementer - New functionality development with tests
+- Refactorer - Code cleanup while maintaining behavior
+- TestEngineer - Comprehensive test suite development (unit, integration, property-based)
+- DocumentationWriter - Inline docs, README updates, architecture decision records
+- MigrationSpecialist - Safe schema changes and data migrations
+
+**Green Team Agents (Persistent):**
+
+- Architect - Structural pattern enforcement, module boundary validation
+- StandardsEnforcer - Code style, naming conventions, best practices
+- SecurityReviewer - Cryptographic correctness, secret management, secure defaults
+
+**4.3 Agent Lifecycle Management**
+
+**Spawning Triggers:**
+
+- Task complexity exceeds single-agent capability
+- Domain expertise required (e.g., database migration needs MigrationSpecialist)
+- Adversarial validation needed (Red Team spawned after Blue Team proposal)
+- Conflict resolution required (Green Team arbitration)
+
+**Spawning Process:**
+
+- Cortex analyzes task requirements and current blackboard state
+- Determines required agent types and team composition
+- Provisions appropriate toolboxes based on agent role
+- Assigns specific subtask with clear acceptance criteria
+- Records spawn relationship in blackboard graph
+
+**Aura Vitality Integration:**
+
+- Every agent enters the "Pulse Loop" upon spawning (ADR 0005)
+- Agents MUST send a heartbeat pulse to `agent_heartbeat` every 30s
+- If an agent task panics, the Sentinel detects the lease expiration
+- The Reaper autonomously triggers the `DissolveAgent` broadcast via MOM
+
+**State Preservation:**
+
+- All agent messages archived in blackboard
+- Performance statistics recorded (success rate, average task time)
+- Toolbox usage patterns logged for optimization
+- Dissolution reason documented for analysis
+
+**5\. The Four-Tier Memory Substrate**
+
+**5.1 Memory Hierarchy**
+
+**Tier 1: Working Memory (Hot Cache)**
+
+- **Technology:** In-memory Rust data structures (HashMap, BTreeMap)
+- **Capacity:** ~500MB RAM allocation
+- **Contents:** Active conversation context (last 20 turns), currently open files, immediate task state
+- **Eviction Policy:** LRU with semantic importance weighting (user-mentioned items pinned)
+- **Access Latency:** Sub-millisecond
+
+**Tier 2: Session Memory (Warm Storage)**
+
+- **Technology:** SQLite with FTS5 full-text search
+- **Capacity:** Per-session database file (~50-200MB typical)
+- **Contents:** Session conversation history, undo/redo stack, recent decisions, active agent states
+- **Persistence:** Write-ahead logging with auto-checkpoint every 5 minutes
+- **Access Latency:** 1-10ms
+
+**Tier 3: Project Memory (Knowledge Graph)**
+
+- **Technology:** SurrealDB with vector embeddings (BGE-M3 model)
+- **Capacity:** Scales to millions of nodes (tested to 1M LOC codebases)
+- **Contents:** Complete codebase AST, architectural decisions, dependency graph, temporal evolution
+- **Query Modes:**
+  - Semantic search (vector similarity)
+  - Structural search (graph traversal)
+  - Hybrid search (combined ranking)
+  - Temporal search (historical state queries)
+- **Access Latency:** 10-100ms depending on query complexity
+
+**Tier 4: Archive Memory (Cold Storage)**
+
+- **Technology:** Parquet columnar format + DuckDB for analytics
+- **Capacity:** Unlimited disk space (compressed ~10:1 ratio)
+- **Contents:** Deprecated code, historical versions, old architectural decisions, past experiments
+- **Archival Policy:** Auto-archive content untouched for 90 days
+- **Access Latency:** 100ms-1s (acceptable for historical queries)
+
+**5.2 Memory Integration Patterns**
+
+**Cross-Tier Queries:** When an agent needs context, the system queries all four tiers in parallel:
+
+- Working Memory checked first (fastest)
+- Session Memory queried for recent history
+- Project Memory searched for relevant code/decisions
+- Archive Memory consulted if no fresh results
+
+Results are merged and ranked by:
+
+- Recency (newer = more relevant)
+- Semantic similarity (embedding distance)
+- Graph distance (closer in dependency graph = more relevant)
+- User interaction frequency (frequently accessed = more important)
+
+**Temporal Coherence:** The memory system understands time as a first-class dimension:
+
+- "Why was this function written?" → Retrieves architectural decision from creation timestamp
+- "What did this look like last month?" → Queries historical snapshot
+- "How has this module evolved?" → Constructs temporal diff graph
+
+**Memory-Guided Agent Spawning:** Before spawning agents, the Cortex consults memory:
+
+- "Has a similar task been solved before?" → Retrieves successful agent configurations
+- "What constraints applied to previous implementations?" → Applies learned patterns
+- "Which agents performed well on this task type?" → Optimizes team composition
+
+**6\. Toolbox Architecture: Structured Capability Distribution**
+
+**6.1 Toolbox Design Philosophy**
+
+**Principle:** Tools are capabilities, not free-for-all functions. Each agent receives a **curated toolbox** aligned with their role and team mandate.
+
+**Benefits:**
+
+- **Security:** Agents cannot access tools outside their permission scope
+- **Auditability:** Every tool invocation is logged with agent context
+- **Specialization:** Agents become experts with their specific toolset
+- **Resource Optimization:** Only load tools needed for active agents
+
+**6.2 Toolbox Taxonomy**
+
+**Code Manipulation Toolboxes:**
+
+- CodeGeneration - Function/class/module creation, code completion, syntax fixing
+- FileManipulation - Read, write, move, delete, permission changes
+- Refactoring - Rename, extract, inline, move, safe transformations
+
+**Analysis Toolboxes:**
+
+- StaticAnalysis - AST analysis, vulnerability detection (Semgrep, CodeQL), code smells
+- DependencyScanning - Transitive dependencies, vulnerability databases, license checking
+- MetricsAnalysis - Complexity, maintainability index, technical debt scoring
+- GraphQuery - Knowledge graph traversal, dependency impact analysis
+
+**Testing & Validation Toolboxes:**
+
+- Testing - Unit test generation/execution, integration test orchestration, coverage reporting
+- Fuzzing - Input generation, crash detection, edge case discovery
+- PerformanceProfiling - CPU/memory profiling, benchmark execution, regression detection
+
+**Version Control Toolboxes:**
+
+- GitOperations - Commit, branch, merge, rebase, stash
+- GitHistory - Blame analysis, commit archaeology, author attribution
+
+**External Integration Toolboxes:**
+
+- BuildSystem - Compile, link, package, dependency resolution
+- PackageManager - Install, update, audit dependencies
+- Sandboxing - Isolated execution environments (Firecracker microVMs, Wasm)
+- ProcessManagement - Spawn, monitor, kill subprocesses
+
+**Visualization Toolboxes:**
+
+- DiagramGeneration - Architecture diagrams, sequence diagrams, call graphs
+- VisualizationGeneration - Metrics dashboards, complexity heatmaps, dependency trees
+
+**6.3 Toolbox Assignment Matrix**
+
+| **Agent Type** | **Team** | **Assigned Toolboxes** |
+| --- | --- | --- |
+| PenetrationTester | Red | StaticAnalysis, DependencyScanning, Fuzzing, GraphQuery |
+| ChaosEngineer | Red | Sandboxing, ProcessManagement, PerformanceProfiling |
+| PerformanceAnalyst | Red | PerformanceProfiling, MetricsAnalysis, GraphQuery, VisualizationGeneration |
+| EdgeCaseMiner | Red | Fuzzing, Testing, StaticAnalysis |
+| TechnicalDebtor | Red | MetricsAnalysis, StaticAnalysis, GraphQuery, DiagramGeneration |
+| FeatureImplementer | Blue | CodeGeneration, FileManipulation, Testing, GitOperations, BuildSystem |
+| Refactorer | Blue | Refactoring, StaticAnalysis, Testing, GitOperations |
+| TestEngineer | Blue | Testing, Fuzzing, CodeGeneration, PerformanceProfiling |
+| DocumentationWriter | Blue | FileManipulation, GitOperations, DiagramGeneration |
+| MigrationSpecialist | Blue | CodeGeneration, Sandboxing, GitOperations, BuildSystem, Testing |
+| Architect | Green | GraphQuery, MetricsAnalysis, DiagramGeneration, VisualizationGeneration, GitHistory |
+| StandardsEnforcer | Green | StaticAnalysis, MetricsAnalysis, FileManipulation (read-only) |
+| SecurityReviewer | Green | StaticAnalysis, DependencyScanning, GraphQuery, GitHistory |
+
+**6.4 Tool Execution & Audit Trail**
+
+Every tool invocation is recorded in the blackboard:
+
+{
+
+tool_name: "generate_function",
+
+agent_id: "agent_abc123",
+
+timestamp: "2025-01-19T10:30:45Z",
+
+parameters: { specification: "...", language: "rust" },
+
+result: { status: "success", output: "..." },
+
+execution_time_ms: 234,
+
+memory_used_mb: 12
+
+}
+
+This enables:
+
+- **Debugging:** "Why did this function get generated this way?"
+- **Performance Analysis:** "Which tools are slowest?"
+- **Security Auditing:** "Did any agent attempt unauthorized file access?"
+- **Learning:** "Which parameter combinations produce best results?"
+
+**7\. Intelligence Architecture: Reasoning Without Hallucination**
+
+**7.1 Hybrid Reasoning Model**
+
+**Layered Approach:**
+
+**Layer 1: Deterministic Validation (Instant)**
+
+- Tree-sitter parsing for syntax correctness
+- Custom constraint DSL for architectural rules
+- Type system validation for static languages
+- Linting and formatting checks
+
+**Layer 2: Structured LLM Reasoning (1-5 seconds)**
+
+- Prompt templates with few-shot examples
+- JSON schema-constrained outputs
+- Confidence scoring required for all outputs
+- Multi-step reasoning with chain-of-thought
+
+**Layer 3: Adversarial Verification (5-30 seconds)**
+
+- Red Team challenges Blue Team proposals
+- Green Team validates against architectural standards
+- Multiple reasoning paths explored (Tree-of-Thought)
+- Consensus required for high-impact changes
+
+**7.2 Hybrid Reasoning System: Constrained Generation + Reflexion**
+
+**Architecture: Three-layer validation ensuring both structural correctness and semantic quality.**
+
+**Layer 1: Constrained Generation (Guidance)**
+
+**Forces structured outputs using grammar-based constraints:**
+
+**rust**
+
+**pub struct ConstrainedPrompt {**
+
+**system: String,**
+
+**user_template: String,**
+
+**output_schema: JsonSchema, _// Enforced during decoding_**
+
+**grammar: Option&lt;GrammarSpec&gt;,**
+
+**}**
+
+**_// Example: Function generation MUST return valid JSON_**
+
+**let schema = json_schema!({**
+
+**"type": "object",**
+
+**"required": \["function_name", "parameters", "body", "tests"\],**
+
+**"properties": {**
+
+**"function_name": {"type": "string"},**
+
+**"parameters": {"type": "array"},**
+
+**"body": {"type": "string"},**
+
+**"return_type": {"type": "string"},**
+
+**"tests": {"type": "array"}**
+
+**}**
+
+**});**
+
+**Benefits:**
+
+- **No malformed outputs (grammar guarantees valid JSON/code structure)**
+- **Faster than post-processing + retry loops**
+- **Works with llama.cpp constrained decoding**
+
+**Layer 2: Reflexion Self-Critique**
+
+**Agent reviews its own output against constitutional principles:**
+
+**rust**
+
+**pub struct ReflexionLoop {**
+
+**max_iterations: u8, _// Default: 3_**
+
+**critique_principles: Vec&lt;Principle&gt;,**
+
+**}**
+
+**pub struct Principle {**
+
+**name: String,**
+
+**description: String,**
+
+**validator: Box&lt;dyn Fn(&Output) -&gt; CritiqueResult>,**
+
+**}**
+
+**_// Example principles_**
+
+**vec!\[**
+
+**Principle {**
+
+**name: "No God Objects",**
+
+**description: "Classes should have single responsibility",**
+
+**validator: Box::new(|output| {**
+
+**if output.class_method_count > 15 {**
+
+**CritiqueResult::Fail("Too many methods, suggest splitting")**
+
+**} else {**
+
+**CritiqueResult::Pass**
+
+**}**
+
+**})**
+
+**},**
+
+**Principle {**
+
+**name: "Error Handling",**
+
+**description: "All external calls must handle errors",**
+
+**validator: Box::new(|output| {**
+
+**_// Check AST for unwrap() calls_**
+
+**})**
+
+**}**
+
+**\]**
+
+**Flow:**
+
+- **Generate initial output (constrained by schema)**
+- **Run through critique principles**
+- **If violations found: Agent receives critique, generates revision**
+- **Repeat until all principles pass OR max iterations reached**
+- **If still failing: Escalate to Green Team for human judgment**
+
+**Layer 3: Knowledge Graph Pattern Matching**
+
+**Query similar successful implementations before generation:**
+
+**rust**
+
+**pub async fn retrieve_similar_patterns(**
+
+**task: &Task,**
+
+**knowledge_graph: &KnowledgeGraph,**
+
+**) -> Vec&lt;SuccessPattern&gt; {**
+
+**_// Semantic search for similar past tasks_**
+
+**let similar_tasks = knowledge_graph**
+
+**.semantic_search(&task.description, top_k: 5)**
+
+**.await?;**
+
+**_// Filter for high-success outcomes_**
+
+**similar_tasks.into_iter()**
+
+**.filter(|t| t.outcome.success_rate > 0.8)**
+
+**.map(|t| SuccessPattern {**
+
+**approach: t.implementation_strategy,**
+
+**constraints_satisfied: t.constraints,**
+
+**agent_config: t.agent_used,**
+
+**})**
+
+**.collect()**
+
+**}**
+
+**\`\`\`**
+
+**\*\*Integration:\*\* Successful patterns injected as few-shot examples in the constrained prompt.**
+
+**\### Combined Workflow**
+
+**\`\`\`**
+
+**1\. Task arrives at agent**
+
+**├─> Query knowledge graph for similar successful patterns**
+
+**├─> Build constrained prompt with:**
+
+**│ ├─ JSON schema enforcement**
+
+**│ ├─ Few-shot examples from knowledge graph**
+
+**│ └─ Constitutional principles in system prompt**
+
+**│**
+
+**2\. Generate initial output (grammar-constrained)**
+
+**│**
+
+**3\. Reflexion loop:**
+
+**├─> Self-critique against principles**
+
+**├─> If violations: regenerate with critique as context**
+
+**└─> Repeat until pass or max iterations**
+
+**│**
+
+**4\. If Reflexion fails after max iterations:**
+
+**└─> Escalate to Red Team for adversarial review**
+
+**│**
+
+**5\. If Red Team also fails:**
+
+**└─> Green Team human judgment required**
+
+**Performance Characteristics**
+
+**Latency:**
+
+- **Simple tasks (pass first try): 2-5 seconds**
+- **Medium tasks (1-2 iterations): 5-15 seconds**
+- **Complex tasks (3 iterations + Red Team): 15-45 seconds**
+
+**Quality Improvement:**
+
+- **Constrained generation: Eliminates ~90% of malformed outputs**
+- **Reflexion: Catches ~70% of principle violations before Red Team**
+- **Knowledge graph patterns: 40% fewer iterations needed vs. zero-shot**
+
+**Storage & Learning**
+
+**All successful outputs stored in knowledge graph with metadata:**
+
+**sql**
+
+**CREATE artifacts CONTENT {**
+
+**task_id: \$task,**
+
+**output: \$generated_code,**
+
+**reflexion_iterations: 2,**
+
+**principles_checked: \["NoGodObjects", "ErrorHandling"\],**
+
+**final_outcome: "success",**
+
+**user_accepted: true,**
+
+**performance_metrics: { ... }**
+
+**};**
+
+**This creates a self-improving feedback loop: successful patterns become few-shot examples for future similar tasks, reducing iteration count over time.**
+
+**7.3 Uncertainty Quantification**
+
+All agent outputs include **Bayesian confidence scores**:
+
+- **0.9-1.0:** High confidence (proceed automatically)
+- **0.7-0.89:** Medium confidence (show reasoning, request confirmation)
+- **<0.7:** Low confidence (spawn additional agents for second opinion)
+
+Confidence calculated from:
+
+- Model token probabilities (logprobs from llama.cpp)
+- Consistency across multiple reasoning paths
+- Historical success rate for similar tasks
+- Constraint satisfaction percentage
+
+**8\. Technical Stack Specification**
+
+**8.1 Core Runtime**
+
+- **Language:** Rust (2021 edition, stable toolchain)
+- **Async Runtime:** Tokio with multi-threaded scheduler
+- **Desktop Framework:** Tauri 2.0 for native UI shell
+- **Frontend:** SolidJS for reactive UI (lightweight, fast)
+
+**8.2 Data Layer**
+
+- **Primary Database:** SurrealDB 2.x (multi-model: graph + vector + document)
+- **Session Storage:** SQLite with FTS5 and JSON1 extensions
+- **Analytics Storage:** DuckDB + Parquet files
+- **Caching:** In-memory Rust collections with manual memory management
+
+**8.3 AI/ML Infrastructure**
+
+**Current Phase: Free Cloud Models (Development)**
+
+- **Model Provider: OpenRouter Free Tier (OpenAI-compatible API)**
+- **Primary Model: qwen/qwen-2.5-coder-32b-instruct via OpenRouter (complex reasoning, architecture, refactoring)**
+- **Fast Model: deepseek/deepseek-coder-6.7b-instruct via OpenRouter (simple edits, autocomplete, validations)**
+- **Embedding Model: text-embedding-3-small or nomic-embed-text via OpenRouter (768-1536 dimensions)**
+- **Client Library: async-openai Rust crate (OpenAI-compatible interface)**
+- **Constrained Generation: JSON mode + post-generation schema validation (cloud APIs lack grammar constraints)**
+- **Rate Limits: Primary ~20 req/min, Fast ~60 req/min (free tier sufficient for development)**
+- **Authentication: API keys stored in .env file (never committed to git)**
+
+**Future Phase 1: Local Models (After Hardware Upgrade)**
+
+- **Inference Engine: llama.cpp with Rust bindings (llama-cpp-rs)**
+- **Primary Model: Qwen2.5-Coder 32B Instruct (Q4_K_M quantization, ~20GB VRAM)**
+- **Fast Model: DeepSeek-Coder 6.7B (Q5_K_M, ~5GB VRAM) for simple tasks**
+- **Embedding Model: BGE-M3 (1024-dimensional, multi-lingual, code-optimized)**
+- **Constrained Generation: Guidance library with grammar-based constrained decoding**
+- **Model Orchestration: Dynamic loading/unloading based on task complexity**
+- **Migration: Change single config flag USE_LOCAL_MODELS=true - zero code changes required**
+
+**Future Phase 2: Provider Agnostic (Post-MVP)**
+
+- **Supported Backends: Local (llama.cpp, Ollama), Free Cloud (OpenRouter, HuggingFace), Paid Cloud (OpenAI, Anthropic, Google, Azure), Self-Hosted (vLLM, TGI)**
+- **Abstraction Layer: saga-llm crate provides unified ModelProvider trait across all backends**
+- **Smart Routing: Automatic provider selection based on cost, availability, and capability requirements**
+- **Cost Tracking: Token usage logging, monthly cost estimates, rate limit monitoring**
+- **User Control: Provider selection via config/providers.toml and settings UI**
+
+**8.4 Code Analysis**
+
+- **Parser:** Tree-sitter (Rust, Python, TypeScript, JavaScript, Go, Java, C/C++)
+- **Static Analysis:** Custom rule engine + Semgrep integration
+- **Constraint Validation:** Custom DSL compiler (alternative to Prolog)
+
+**8.5 Tool Integration**
+
+- **MCP (Model Context Protocol):** Official Rust SDK for tool standardization
+- **Sandboxing:** Firecracker microVMs for untrusted code execution
+- **Git:** libgit2 via git2-rs bindings
+- **Build Systems:** Language-specific (cargo, npm, maven) via process spawning
+
+**8.6 Hardware Target**
+
+- **CPU:** AMD Ryzen AI 9 HX 370 (12 cores, 24 threads)
+- **RAM:** 96GB DDR5
+- **GPU:** Integrated RDNA 3.5 (sufficient for quantized models)
+- **Storage:** NVMe SSD with 1TB+ free space
+
+**9\. System Workflows**
+
+**9.1 Feature Implementation Flow**
+
+1\. User Input
+
+└─> Intent Parser (extracts goals, constraints, success criteria)
+
+2\. Cortex Planning
+
+└─> Creates task decomposition
+
+└─> Queries memory for similar past implementations
+
+└─> Posts task to blackboard
+
+3\. Blue Team Activation
+
+└─> Spawns FeatureImplementer agent
+
+└─> Agent queries knowledge graph for context
+
+└─> Generates implementation plan
+
+└─> Posts proposal to blackboard
+
+4\. Red Team Challenge (Parallel)
+
+└─> Spawns PenetrationTester + EdgeCaseMiner
+
+└─> Agents review proposal for flaws
+
+└─> Post identified issues to blackboard
+
+5\. Blue Team Revision
+
+└─> FeatureImplementer addresses Red Team concerns
+
+└─> Implements code with tests
+
+└─> Runs in sandbox for validation
+
+└─> Posts final implementation to blackboard
+
+6\. Green Team Review
+
+└─> Architect validates structural patterns
+
+└─> StandardsEnforcer checks conventions
+
+└─> SecurityReviewer audits for vulnerabilities
+
+└─> Green Team posts verdict
+
+7\. Cortex Integration
+
+└─> If approved: Applies changes via MCP tools
+
+└─> Updates knowledge graph with new code + decision rationale
+
+└─> Dissolves ephemeral agents
+
+└─> Notifies user of completion
+
+**9.2 Refactoring Flow**
+
+1\. User Request
+
+└─> "Extract payment logic into separate service"
+
+2\. Cortex Analysis
+
+└─> Queries knowledge graph for all payment-related code
+
+└─> Identifies 8 locations with embedded payment logic
+
+└─> Spawns Refactorer (Blue) + PerformanceAnalyst (Red)
+
+3\. Blue Team Proposal
+
+└─> Refactorer generates extraction plan
+
+└─> Identifies shared abstractions
+
+└─> Proposes new module structure
+
+4\. Red Team Analysis
+
+└─> PerformanceAnalyst checks for performance regressions
+
+└─> Identifies potential issues (e.g., "N+1 queries introduced")
+
+└─> Posts critique to blackboard
+
+5\. Collaborative Resolution
+
+└─> Refactorer revises plan to address performance concerns
+
+└─> Both agents reach consensus
+
+└─> Green Team Architect validates module boundaries
+
+6\. Execution
+
+└─> Refactorer applies transformations incrementally
+
+└─> After each step: runs tests in sandbox
+
+└─> If tests fail: automatic rollback
+
+└─> If tests pass: commits change with descriptive message
+
+7\. Verification
+
+└─> TestEngineer generates additional tests for new service
+
+└─> Green Team approves final structure
+
+└─> Knowledge graph updated with new module relationships
+
+**9.3 Debugging Flow**
+
+1\. Error Detection
+
+└─> User reports: "Authentication failing intermittently"
+
+2\. Cortex Spawns Debugging Task Force
+
+└─> EdgeCaseMiner (Red): Reproduce edge case
+
+└─> PerformanceAnalyst (Red): Check for race conditions
+
+└─> FeatureImplementer (Blue): Propose fix
+
+3\. Red Team Investigation
+
+└─> EdgeCaseMiner fuzzes auth inputs
+
+└─> Discovers: "Fails when username contains UTF-8 emoji"
+
+└─> PerformanceAnalyst profiles: No race condition found
+
+4\. Root Cause Analysis
+
+└─> Queries knowledge graph: "Who implemented auth parsing?"
+
+└─> Retrieves historical decision: "Assumed ASCII-only usernames"
+
+└─> Posts findings to blackboard
+
+5\. Blue Team Fix
+
+└─> FeatureImplementer updates validation logic
+
+└─> Adds UTF-8 test cases
+
+└─> Runs full test suite in sandbox
+
+6\. Green Team Documentation
+
+└─> DocumentationWriter updates ADR with new assumption
+
+└─> Adds inline comment explaining UTF-8 handling
+
+└─> StandardsEnforcer validates change meets code standards
+
+7\. Deployment
+
+└─> Changes applied with git commit linking to original issue
+
+└─> Knowledge graph records: "Bug fix for UTF-8 handling in auth"
+
+**10\. User Experience Model**
+
+**10.1 Interaction Modes**
+
+**Mode 1: Co-Pilot (Low Autonomy)**
+
+- User approves every change
+- Agents propose, user decides
+- Full visibility into reasoning
+- Suitable for critical systems
+
+**Mode 2: Trusted Teammate (Medium Autonomy)**
+
+- Agents execute low-risk changes automatically
+- User notified of significant decisions
+- Can interrupt at any time
+- Default mode for most users
+
+**Mode 3: Technical Lead (High Autonomy)**
+
+- Agents operate independently within constraints
+- User reviews results periodically
+- Interventions only on conflicts or uncertainty
+- Suitable for well-defined tasks
+
+**Autonomy Slider:** UI control allowing dynamic adjustment during session
+
+**10.2 Transparency Features**
+
+**Brain Scan View:**
+
+- Expandable panel showing:
+  - Current blackboard state
+  - Active agent reasoning (live LLM token generation)
+  - Message flow between agents
+  - Knowledge graph queries being executed
+  - Confidence scores for all decisions
+
+**Decision Provenance:**
+
+- Click any code artifact → See decision chain
+  - Which agent created it?
+  - What task was it solving?
+  - What constraints applied?
+  - What alternatives were considered?
+  - Why was this approach chosen?
+
+**Agent Activity Monitor:**
+
+- Live view of spawned agents
+- Status indicators (idle, thinking, executing, waiting)
+- Task queues for each team
+- Performance metrics (success rate, avg completion time)
+
+**11\. System Boundaries & Constraints**
+
+**11.1 What Zed42 DOES**
+
+- **Architectural planning** - Decomposes complex features into structured tasks
+- **Code generation** - Implements functions, classes, modules with tests
+- **Refactoring** - Safe transformations with rollback capability
+- **Debugging assistance** - Root cause analysis and fix proposals
+- **Knowledge retention** - Remembers why decisions were made
+- **Quality enforcement** - Adversarial validation before changes applied
+
+**11.2 What** **Zed42 DOES NOT Do**
+
+- **Replace human judgment** - Final authority remains with user
+- **Operate on production systems** - All changes in local sandbox first
+- **Make business decisions** - Technical implementation only
+- **Guarantee correctness** - Confidence scores, not certainty
+- **Learn from other users** - Completely local, no telemetry
+
+**11.3 Explicit Non-Goals**
+
+- Cloud integration (intentionally local-only)
+- Real-time collaboration (single-user focus)
+- Language/framework lock-in (polyglot by design)
+- Hidden behavior (transparency is a feature)
+
+**12\. Quality Attributes & Design Trade-offs**
+
+**12.1 Performance Targets**
+
+- **Semantic search latency:** <100ms for 1M LOC codebase
+- **Agent spawn time:** <2 seconds including toolbox provisioning
+- **Code generation:** <30 seconds for complex functions
+- **Memory footprint:** <80GB RAM under typical load (96GB total available)
+- **Incremental indexing:** <5 seconds for 1000 changed lines
+
+**12.2 Scalability Limits**
+
+- **Codebase size:** Tested to 1M lines of code, theoretical limit ~5M LOC
+- **Concurrent agents:** Max 20 active agents simultaneously
+- **Session length:** Unlimited, but performance degrades after 1000+ messages (archive to cold storage)
+- **File size:** Individual files up to 50,000 lines (larger files split for analysis)
+
+**12.3 Reliability Guarantees**
+
+- **Crash recovery:** Write-ahead logging ensures no data loss on unexpected shutdown
+- **Rollback capability:** All changes versioned, instant revert to any previous state
+- **Sandbox isolation:** Generated code cannot access host filesystem outside project directory
+- **Deterministic replay:** Full audit trail allows reproducing any decision path
+
+**12.4 Security Model**
+
+- **No network access** - System operates entirely offline (except user-initiated git push)
+- **Tool permission system** - Agents cannot use tools outside assigned toolbox
+- **Audit logging** - Every file modification logged with agent attribution
+- **Sandboxed execution** - Unknown code runs in Firecracker microVM with limited resources
+
+**13\. Extensibility & Future Evolution**
+
+**13.1 Plugin Architecture (Future)**
+
+- Custom agent types via Rust traits
+- User-defined toolboxes via WASM modules
+- Custom constraint DSL rules
+- Additional LLM model backends
+
+**13.2 Planned Enhancements**
+
+- **Multi-project knowledge graph** - Cross-repository learning
+- **Team collaboration mode** - Multiple users with shared blackboard
+- **Language-specific optimizations** - Deeper integration for Rust/Python/TS
+- **Advanced visualization** - 3D code maps, real-time metrics dashboards
+
+**14\. Success Criteria for MVP**
+
+**MVP is considered successful when Zed42 can:**
+
+- **Index a 50K LOC codebase in <5 minutes**
+  - Build complete AST graph
+  - Generate embeddings for all functions/classes
+  - Establish dependency relationships
+- **Answer "why" questions about past decisions**
+  - "Why does the AuthService use a singleton pattern?"
+  - Response includes: Original decision, timestamp, affected files, rationale
+- **Refactor a module without breaking tests**
+  - Extract service from monolithic controller
+  - Update all call sites automatically
+  - Generate tests for new module
+  - Validate in sandbox before applying
+- **Demonstrate Red/Blue/Green team collaboration**
+  - Blue proposes implementation
+  - Red identifies edge case
+  - Blue revises to address concern
+  - Green approves with rationale
+- **Improve through usage**
+  - Track successful vs failed prompt templates
+  - Automatically promote high-performing templates
+  - Observable improvement in code quality metrics over time
+- **Operate transparently**
+  - User can inspect reasoning for any decision
+  - Full audit trail from intent → code
+  - No unexplained "black box" behavior
+
+**15\. Critical Design Decisions & Rationale**
+
+**Why SurrealDB over PostgreSQL + Vector Extension?**
+
+- **Multi-model in single database** - Graph, vector, document without separate systems
+- **Native graph traversal** - Decision chains require efficient relationship queries
+- **Embedded mode** - No separate database server to manage
+- **FQL flexibility** - More expressive than SQL for knowledge graph patterns
+
+**Why Red/Blue/Green over Single Critic?**
+
+- **Adversarial robustness** - Opposition produces stronger outputs than agreement
+- **Specialization** - Domain-focused agents outperform generalist reviewers
+- **Transparent trade-offs** - Conflicts make design tensions explicit
+- **Scalable quality** - Parallel validation faster than sequential review
+
+**Why Local Models over API Calls?**
+
+- **Zero operational cost** - No per-token pricing
+- **Privacy sovereignty** - Proprietary code never leaves local machine
+- **Unlimited iteration** - No rate limits on refinement loops
+- **Predictable performance** - Not subject to API degradation or deprecation
+
+**Why Rust over Python?**
+
+- **Memory safety** - Critical for long-running desktop application
+- **Performance** - Native speed for graph traversal and embedding operations
+- **Concurrency** - Tokio async runtime for efficient multi-agent coordination
+- **Distribution** - Single binary deployment without Python environment management
+
+**Why Toolboxes over Unified Tool Access?**
+
+- **Principle of least privilege** - Agents only access necessary capabilities
+- **Clear responsibility** - Tool usage implies authorization
+- **Auditability** - Violations immediately detectable
+- **Resource optimization** - Load tools only when agents are active
+
+**16\. Architectural Risks & Mitigation Strategies**
+
+| **Risk** | **Impact** | **Probability** | **Mitigation** |
+| --- | --- | --- | --- |
+| Local models insufficient intelligence | High | Medium | Multi-model ensemble, fallback to stronger model for complex tasks |
+| SurrealDB production stability issues | High | Low | Extensive testing, fallback to SQLite for session data |
+| Agent coordination deadlocks | Medium | Medium | Timeout mechanisms, Green Team arbitration, manual override |
+| Memory consumption exceeds 96GB | High | Low | Tiered eviction, lazy loading, streaming for large files |
+| Tree-sitter parsing failures | Medium | Low | Graceful degradation, regex fallback for unsupported languages |
+| Sandbox escape vulnerabilities | Critical | Very Low | Firecracker microVMs, gVisor for defense-in-depth |
+| User confusion with multi-agent model | Medium | Medium | Progressive disclosure, simplified default mode, extensive documentation |
+
+**17\. Development Phases (High-Level Only)**
+
+**Phase 1: Foundation** - Memory substrate, blackboard, basic LLM integration **Phase 2: Single-Agent Intelligence** - One sophisticated agent with full toolbox **Phase 3: Multi-Agent Coordination** - Red/Blue/Green teams, dynamic spawning **Phase 4: Production Hardening** - Error handling, recovery, performance optimization **Phase 5: User Experience** - UI polish, documentation, onboarding
+
+**18\. Conclusion**
+
+**Zed42** represents a **fundamentally different approach** to AI-assisted development. Rather than bolting AI onto existing workflows, it rebuilds the SDLC from the ground up around:
+
+- **Memory as substrate** - The knowledge graph is the foundation, not an afterthought
+- **Adversarial quality** - Opposition produces better results than agreement
+- **Local sovereignty** - Complete user control without external dependencies
+- **Transparent reasoning** - Every decision traceable through the blackboard graph
+- **Structured agency** - Toolboxes and team mandates prevent chaos
+
+This architecture trades **cloud convenience** for **user sovereignty**, **simplicity** for **sophistication**, and **immediate capability** for **long-term excellence**.
+
+The system is designed to be a **learning partner** that improves with use, a **trusted teammate** that explains its reasoning, and a **production-grade tool** that respects the complexity of real-world software engineering.
+
+**Document Version:** 1.0  
+**Last Updated:** January 19, 2025  
+**Status:** Final Architecture - Ready for Implementation

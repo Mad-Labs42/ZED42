@@ -1,0 +1,87 @@
+Master Implementation Plan: Blackboard & Heartbeat (v2.0)
+Goal: Transform zed42-blackboard into a reactive, self-healing message bus that drives multi-agent coordination with FAANG+ reliability.
+
+Phase 1: The "Symbolic" Schema (SurrealQL Layer)
+We will use SurrealQL’s native event system to handle liveness. This moves complexity out of the Rust binary and into the data layer.
+
+1.1. Schemafull Tables
+Code snippet
+-- The Heartbeat Registry
+DEFINE TABLE agent_heartbeat SCHEMAFULL;
+DEFINE FIELD agent_id ON agent_heartbeat TYPE record<agent>;
+DEFINE FIELD last_pulse ON agent_heartbeat TYPE datetime VALUE time::now();
+DEFINE FIELD status ON agent_heartbeat TYPE string ASSERT $value IN ['Idle', 'Working', 'Zombie'];
+DEFINE INDEX idx_status ON agent_heartbeat FIELDS status;
+
+-- The Message Envelope (The Standard Model)
+DEFINE TABLE blackboard SCHEMAFULL;
+DEFINE FIELD sender ON blackboard TYPE record<agent>;
+DEFINE FIELD target_team ON blackboard TYPE string; -- 'Blue', 'Green', 'Cortex', 'Broadcast'
+DEFINE FIELD correlation_id ON blackboard TYPE uuid; -- For Request/Response threading
+DEFINE FIELD payload ON blackboard TYPE object;
+DEFINE FIELD created_at ON blackboard TYPE datetime VALUE time::now();
+1.2. The Auto-Kill Event (Fail-Proof Intelligence)
+This is the "Goldilocks" choice: The database monitors itself.
+
+Code snippet
+DEFINE EVENT monitor_zombies ON agent_heartbeat WHEN $event = "UPDATE" THEN {
+    IF (time::now() - last_pulse) > 1m {
+        UPDATE $after SET status = 'Zombie';
+        -- Create a Critical Failure log for the MOM to intercept
+        CREATE routing_logs SET 
+            agent_id = $after.agent_id,
+            failover_reason = "Heartbeat Timeout",
+            is_critical = true,
+            timestamp = time::now();
+    };
+};
+Phase 2: The Rust Substrate (zed42-blackboard)
+Focus: Creating a high-performance "Watcher" that bridges SurrealDB Live Queries to Rust internal channels.
+
+2.1. The BlackboardWatcher (Background Substrate)
+The Handover: Implement a long-running tokio task that maintains a single db.live_select("blackboard") stream.
+
+Selective Filtering: Use SurrealQL filters (e.g., LIVE SELECT * FROM blackboard WHERE target_team = 'Blue') to ensure agents only receive relevant traffic.
+
+RAII Heartbeat Guard: Create a HeartbeatGuard struct that implements Drop. When an agent task finishes or panics, the guard ensures a final "De-registration" message is sent to the blackboard.
+
+2.2. Internal Dispatcher Architecture
+Crate: Use tokio::sync::broadcast for "Broadcast" messages and tokio::sync::mpsc (bounded) for agent-specific tasks.
+
+Backpressure: Set channel capacity to 100. If an agent falls behind, the Watcher must log a warn! and drop the message rather than crashing the system.
+
+Phase 3: Integration & "Goldilocks" Resilience
+3.1. The Heartbeat "Pulse" (Agent-Side)
+Every agent will now include a background "Pulse" loop:
+
+Rust
+loop {
+    let _ = db.query("UPDATE agent_heartbeat SET last_pulse = time::now() WHERE agent_id = $auth").await;
+    tokio::time::sleep(Duration::from_secs(30)).await;
+}
+3.2. Fail-Proof "Handshakes"
+Correlation IDs: Every BlackboardMessage must carry a correlation_id.
+
+The Handshake Protocol:
+
+Cortex posts a Task.
+
+Agent "claims" it by updating the message status.
+
+If the Heartbeat Guard detects the agent died (Zombie status in DB), the MOM (Model Orchestration Matrix) sees the routing_log and re-triggers the task.
+
+Phase 4: Hardening & Verification
+Namespace Isolation: The Blackboard will run in its own SurrealDB database (zed42/blackboard) to isolate traffic from the Intelligence Ledger.
+
+Reconnection Logic: The BlackboardWatcher must use the surrealdb Rust SDK's built-in WebSocket auto-reconnect features.
+
+Dead-Letter Handling: Any message that remains "Unclaimed" for > 5 minutes is automatically moved to a blackboard_dead_letters table for audit.
+
+Execution Steps for Antigravity
+Migrate Schema: Apply the SurrealQL DEFINE TABLE and DEFINE EVENT blocks to the production DB.
+
+Implement BlackboardWatcher: Build the live_select loop in zed42-blackboard.
+
+Refactor Agents: Add the HeartbeatGuard and "Pulse" loop to the Agent lifecycle.
+
+Verify: Run a test where an agent is manually killed; verify that the monitor_zombies event fires and the MOM logs a critical failure.

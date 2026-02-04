@@ -1,0 +1,103 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/cortex",
+    "crates/blackboard",
+    "crates/agents",
+    "crates/toolboxes",
+    "crates/memory",
+    "crates/llm",
+    "crates/mcp",
+    "crates/ui",
+    "crates/ledger", "crates/mom",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["ZED42 Team"]
+license = "MIT"
+repository = "https://github.com/yourusername/zed42"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+
+# Database & Storage
+surrealdb = { version = "2.1", features = ["kv-mem", "kv-rocksdb", "protocol-ws", "protocol-http"] }
+rusqlite = { version = "0.30", features = ["bundled", "serde_json"] }
+duckdb = { version = "1.1", features = ["bundled"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# AI/ML (Development Phase - OpenRouter)
+async-openai = "0.18"
+reqwest = { version = "0.11", features = ["json"] }
+
+# Tree-sitter for code parsing
+tree-sitter = "0.20"
+tree-sitter-rust = "0.20"
+tree-sitter-python = "0.20"
+tree-sitter-typescript = "0.20"
+tree-sitter-javascript = "0.20"
+tree-sitter-go = "0.20"
+
+# Git integration
+git2 = "0.18"
+
+# Desktop UI (Tauri)
+tauri = { version = "2.0.0-beta", features = ["devtools"] }
+
+# Utilities
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1.6", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+dotenv = "0.15"
+parking_lot = "0.12"
+tempfile = "3.8"
+rust_decimal = "1.33"
+dashmap = "5.5"
+
+
+# MCP Protocol (add this to individual crate dependencies as needed)
+# mcp-sdk = { git = "https://github.com/anthropics/rust-sdk" }
+
+[profile.dev]
+opt-level = 1
+debug = true
+# Increase codegen units to reduce peak memory usage
+codegen-units = 256
+
+# Reduce memory usage during compilation for large dependencies
+[profile.dev.package."*"]
+opt-level = 0
+debug = false
+codegen-units = 256
+
+[profile.dev.package.surrealdb]
+opt-level = 0
+debug = false
+codegen-units = 256
+
+[profile.dev.package.surrealdb-core]
+opt-level = 0
+debug = false
+codegen-units = 256
+
+[profile.dev.package.rocksdb]
+opt-level = 0
+debug = false
+
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true

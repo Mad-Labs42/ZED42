@@ -1,0 +1,27 @@
+[package]
+name = "zed42-memory"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+surrealdb.workspace = true
+parking_lot.workspace = true
+rusqlite.workspace = true
+duckdb.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+zed42-core = { path = "../core" }
+zed42-llm = { path = "../llm" }
+
+
+[dev-dependencies]
+tempfile = "3.8"

@@ -1,0 +1,22 @@
+[package]
+name = "zed42-llm"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio = { version = "1.35", features = ["rt", "macros", "sync"] }
+parking_lot = "0.12"
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+reqwest.workspace = true
+async-openai.workspace = true
+schemars = "0.8"
+
+[dev-dependencies]
+tempfile = "3.8"

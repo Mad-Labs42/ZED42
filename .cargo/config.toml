@@ -1,0 +1,13 @@
+[build]
+# Limit to 2 threads so your i3 doesn't freeze Antigravity/Windows
+jobs = 2
+rustc-wrapper = "sccache"
+
+
+[target.x86_64-pc-windows-msvc]
+# linker = "lld-link.exe"
+# rustflags = [
+#     "-Csplit-debuginfo=unpacked" # Fast incremental linking
+# ]
+
+

@@ -1,0 +1,51 @@
+# ZED42 Model Provider Configuration
+
+[development]
+# Current phase: Free cloud models via OpenRouter
+provider = "openrouter"
+enabled = true
+
+[development.models]
+primary = "qwen/qwen-2.5-coder-32b-instruct"
+fast = "deepseek/deepseek-coder-6.7b-instruct"
+embedding = "text-embedding-3-small"
+
+[development.rate_limits]
+primary_rpm = 20  # Requests per minute
+fast_rpm = 60
+embedding_rpm = 100
+
+[local]
+# Future phase: Local models after hardware upgrade
+provider = "llama_cpp"
+enabled = false
+
+[local.models]
+primary = "Qwen2.5-Coder-32B-Instruct-Q4_K_M.gguf"
+fast = "DeepSeek-Coder-6.7B-Q5_K_M.gguf"
+embedding = "bge-m3-gguf"
+
+[local.paths]
+models_dir = "./models"
+cache_dir = "./cache"
+
+[local.performance]
+n_ctx = 8192
+n_threads = 12
+n_gpu_layers = 40
+
+[cloud]
+# Future phase: Optional paid cloud providers
+enabled = false
+
+[cloud.openai]
+api_key_env = "OPENAI_API_KEY"
+models = ["gpt-4", "gpt-3.5-turbo"]
+
+[cloud.anthropic]
+api_key_env = "ANTHROPIC_API_KEY"
+models = ["claude-3-opus", "claude-3-sonnet"]
+
+[cloud.google]
+api_key_env = "GOOGLE_API_KEY"
+models = ["gemini-pro"]

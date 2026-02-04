@@ -1,0 +1,53 @@
+ZED42 Source Available License
+
+Copyright (c) 2025 ZED42 Team. All rights reserved.
+
+This software and associated documentation files (the "Software") are made
+available for viewing and educational purposes only.
+
+RESTRICTIONS:
+
+You may NOT:
+- Use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software or any portion thereof
+- Use this Software for any commercial purposes whatsoever
+- Create derivative works based on this Software or any portion thereof
+- Incorporate any part of this Software into other projects or products
+- Remove or modify this license notice from any copies of the Software
+- Use this Software in production environments or for commercial gain
+- Reverse engineer, decompile, or disassemble the Software
+- Use the Software in any way that competes with ZED42 or its creators
+
+PERMITTED USES:
+
+You may:
+- View the source code for educational and research purposes only
+- Link to this repository for reference purposes
+- Study the architecture and design patterns for learning purposes
+
+ATTRIBUTION:
+
+If you reference this Software in academic work or publications, you must
+provide proper attribution to the ZED42 project and its creators.
+
+NO WARRANTY:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+ENFORCEMENT:
+
+Violation of this license will result in immediate termination of any rights
+granted herein and may result in legal action.
+
+LICENSING INQUIRIES:
+
+For permission to use this Software outside the scope of this license,
+including commercial licensing, please contact the copyright holder.
+
+Repository: https://github.com/yourusername/zed42

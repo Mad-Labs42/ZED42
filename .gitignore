@@ -1,0 +1,50 @@
+# Rust
+/target
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment & Secrets
+.env
+.env.local
+*.key
+config/secrets.toml
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.surql
+data/
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+
+# Node (for Tauri frontend)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Architecture source (keep only .txt)
+ARCHITECTURE.docx

@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(cargo check:*)",
+      "Bash(tree:*)",
+      "Bash(grep:*)",
+      "Bash(for file in crates/*/src/lib.rs)",
+      "Bash(do head -n 3 \"$file\")",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(cargo test:*)",
+      "Bash(find:*)",
+      "Bash(where cargo:*)",
+      "Bash(curl:*)",
+      "Bash(chmod:*)",
+      "Bash(/tmp/rustup-init.sh:*)",
+      "Bash(source \"$HOME/.cargo/env\")",
+      "Bash(cargo:*)",
+      "Bash(rustc:*)",
+      "Bash(rustup:*)",
+      "Bash(export PATH=\"$HOME/.cargo/bin:$PATH\")",
+      "Bash(choco:*)",
+      "Bash(winget:*)",
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(git log:*)",
+      "Bash(setx LIBCLANG_PATH \"C:\\\\Program Files\\\\LLVM\\\\bin\")",
+      "Bash(export PATH=\"$HOME/.cargo/bin:/c/Program Files/LLVM/bin:$PATH\")",
+      "Bash(export LIBCLANG_PATH=\"/c/Program Files/LLVM/bin\")"
+    ]
+  }
+}
